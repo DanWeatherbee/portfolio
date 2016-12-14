@@ -1,0 +1,374 @@
+.container {
+    background: url(images/large/cool_girl-HD-lg-1920x1080.jpg)fixed no-repeat center;
+}
+body {
+    background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
+}
+image credits go to #lets-connect {
+    opacity: .7;
+}
+#lets-connect:hover {
+    opacity: 1;
+    background-color: black;
+}
+#skills-span {
+    color: red;
+    background-color: black;
+    font-size: 150%;
+    opacity: .7;
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+}
+#skills {
+    letter-spacing: 1em;
+}
+.welcome-message {
+    background-color: black;
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+}
+.responsive-images {
+    height: 100%;
+    width: 100%;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+.letter-spacer {
+    letter-spacing: .8em;
+}
+#biopic-col {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: black;
+    opacity: .7;
+}
+.biopic {
+    height: 100px;
+    width: 100px;
+    background: transparent;
+}
+li {
+    color: lawngreen;
+}
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+.clear-fix {
+    overflow: auto;
+}
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+body,
+#a-link,
+#skills-h3,
+.welcome-message,
+.location-text,
+.date-text,
+#name,
+#projects,
+#education,
+#work-experience,
+#live-work-header {
+    color: turquoise;
+    font-family: "lato", sans-serif;
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+}
+.red-headers {
+    color: red;
+}
+#projects,
+#education,
+#work-experience {
+    display: none;
+}
+#name:hover,
+#projects:hover,
+#education:hover,
+#work-experience:hover,
+#live-work-header:hover {
+    background-color: black;
+    border-radius: 10%;
+}
+.education-entry,
+.work-entry,
+.project-entry {
+    padding: 0 5%;
+}
+h1 {
+    font-size: 40px;
+    line-height: 48px;
+    display: inline;
+}
+h2 {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 10px;
+}
+h3 {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 22px;
+}
+h4 {
+    line-height: 17px;
+}
+h2,
+h4 {
+    font-weight: bold;
+}
+h2,
+h3,
+h4,
+h5 {
+    padding: 10px 5%;
+}
+.date-text,
+.location-text {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
+}
+.date-text {
+    float: left;
+}
+.location-text {
+    float: right;
+}
+p {
+    font-size: 14px;
+    line-height: 21px;
+}
+a {
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+.welcome-message {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: .7;
+}
+#skills-h3 {
+    display: none;
+}
+.orange {
+    background-color: #f5ae23;
+}
+.orange-text {
+    color: #f5ae23;
+}
+.gray {
+    background-color: #f3f3f3;
+    padding-bottom: 10px;
+    clear: both;
+}
+.dark-gray {
+    background-color: #4a4a4a;
+}
+/* TODO: Replace with image later */
+
+#header {
+    background: transparent;
+}
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+.center-content {
+    padding: 2.5% 5%;
+}
+ul {
+    list-style-type: none;
+}
+img {
+    padding: 6%;
+}
+#project-img {
+    max-width: 400px;
+    max-height: 400px;
+}
+span {
+    padding: 5px;
+}
+#lets-connect {
+    text-align: center;
+}
+#row-clear {
+    clear: both;
+}
+#map {
+    position: relative;
+    display: block;
+    height: 83%;
+    width: 83%;
+    margin: 0 5%;
+}
+#mapDiv {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
+}
+#info {
+    color: black;
+}
+.cubic-bezier {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.tranparent-on {
+    background-color: transparent;
+}
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 3024px) {
+    #lets-connect {
+        margin-top: 5%;
+    }
+}
+p:hover {
+    font-size: 200%;
+    border: 3px;
+    border-radius: 10%;
+    border-color: turquoise;
+    padding: 1.5em;
+    letter-spacing: .3em;
+    line-height: 1.5em;
+}
+a:hover {
+    border-radius: 30%;
+    padding: 2%;
+    font-size: 130%;
+}
+p:hover,
+a:hover {
+    background-color: darkslategray;
+}
+.container:hover {
+    background: inherit;
+}
+p:hover,
+a:hover,
+.container:hover,
+#date-text {
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0, 1, 1, 0);
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+}
+}
+@media only screen and (max-width: 1024px) {
+    #lets-connect {
+        margin-top: 5%;
+    }
+    #date-text {
+        font-size: 200%;
+        color: turquoise;
+    }
+    p:hover {
+        font-size: 200%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .biopic {
+        width: 175px;
+    }
+    p:hover {
+        font-size: 140%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    #name {
+        font-size: 180%;
+    }
+    p:hover {
+        font-size: 130%;
+    }
+    #lets-connect {
+        margin-top: 10%;
+    }
+    .biopic {
+        width: 150px;
+    }
+    .welcome-message {
+        display: none;
+    }
+    #project-img {
+        max-width: 285px;
+        max-height: 285px;
+    }
+    p,
+    h2,
+    a {
+        letter-spacing: .1em
+    }
+    p,
+    #copyright,
+    #footerContacts,
+    #topContacts {
+        font-size: 1.5em;
+    }
+    a {
+        font-size: 1.4em;
+    }
+    h2,
+    h3,
+    h4 {
+        font-size: 2.3em;
+    }
+    #map {
+        position: relative;
+        display: block;
+        height: 83%;
+        width: 100%;
+        margin: 0 5%;
+    }
+    #mapDiv {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        padding-bottom: 5%;
+    }
+}
+@media only screen and (min-width: 750px) {
+    #skills-h3,
+    .biopic {
+        display: block;
+    }
+    #skills {
+        letter-spacing: .3em;
+        font-size: 100%;
+    }
+}

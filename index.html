@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dan Weatherbee's Resume</title>
+    <!--   Style Sheets -->
+    <!--   Google Fonts Link -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet' type='text/css'>
+    <!--     <link rel="stylesheet" href="css/style.css"> this is the orginal, if you use this you can see the normal version -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--            bootstrap framework -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--   Java Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Because this app is running on a secure server I had to change http to https to get maps to run.
+When I used the console to debug it, I got the information I needed -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/resumeBuilder-min.js"></script>
+</head>
+
+<body class="center-block img-responsive">
+    <div class="container center-block img-responsive" id="main">
+        <div class="row center-content clear-fix" id="header">
+            <ul id="topContacts" class="flex-box"></ul>
+        </div>
+        <div id="row-clear" class="row cubic-bezier"></div>
+        <div id="work-experience" class="row gray cubic-bezier tranparent-on">
+            <h2 id="work-header" class="red-headers">Work Experience</h2>
+            <span><em>Click Header to Toggle View</em></span>
+        </div>
+        <button id="button-show-work">Show Work</button>
+        <div id="projects" class="row cubic-bezier">
+            <h2 id="projects-header" class="red-headers">Projects</h2>
+            <span><em>Click Header to Toggle View</em></span>
+        </div>
+        <button id="button-show-projects">Show Projects</button>
+        <div id="education" class="row gray cubic-bezier tranparent-on">
+            <h2 id="education-header" class="red-headers">Education</h2>
+            <span><em>Click Header to Toggle View</em></span>
+        </div>
+        <button id="button-show-education">Show Education</button>
+        <div id="mapDiv" class="row cubic-bezier">
+            <h2 id="live-work-header">Where I've Lived and Worked</h2>
+            <div id="map">
+            </div>
+        </div>
+        <div id="lets-connect" class="row dark-gray cubic-bezier">
+            <h2 class="orange center-text">Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box cubic-bezier">
+            </ul>
+        </div>
+    </div>
+    <script src="js/resumeBuilder.js"></script>
+    <script>
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.backgroundColor = 'black';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.backgroundColor = 'black';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.backgroundColor = 'black';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.backgroundColor = 'black';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.backgroundColor = 'black';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('lets-connect').style.backgroundColor = 'black';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.backgroundColor = 'black';
+        }
+    </script>
+    <!-- end of container -->
+</body>
+
+</html>
