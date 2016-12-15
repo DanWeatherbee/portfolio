@@ -4,9 +4,9 @@
 body {
     background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
 }
-image credits go to #lets-connect {
+/*#lets-connect {
     opacity: .7;
-}
+}*/
 #lets-connect:hover {
     opacity: 1;
     background-color: black;
@@ -80,7 +80,6 @@ h5,
 h6,
 a,
 p,
-body,
 #a-link,
 #skills-h3,
 .welcome-message,
@@ -97,21 +96,42 @@ body,
     -moz-box-shadow: -2px 20px 24px -9px turquoise;
     box-shadow: -2px 20px 24px -9px turquoise;
 }
+#a-link:hover {
+    background-color: black;
+    color: lawngreen;
+}
+button {
+    background-color: turquoise;
+    padding: 5%;
+    opacity: .3;
+}
+button:hover {
+    font-size: 150%;
+    opacity: .9;
+    background-color: white;
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+    border: solid 10px;
+    border-color: red;
+}
 .red-headers {
     color: red;
 }
+.red-headers:hover {
+    color: lightblue;
+    background-color: darkgreen;
+    border-radius: 10px 200px 200px 10px;
+    -moz-border-radius: 10px 200px 200px 10px;
+    -webkit-border-radius: 10px 200px 200px 10px;
+    border: solid 2px;
+    border-color: red;
+}
 #projects,
 #education,
-#work-experience {
+#work-experience,
+#button-show-map {
     display: none;
-}
-#name:hover,
-#projects:hover,
-#education:hover,
-#work-experience:hover,
-#live-work-header:hover {
-    background-color: black;
-    border-radius: 10%;
 }
 .education-entry,
 .work-entry,
@@ -221,6 +241,7 @@ span {
 }
 #lets-connect {
     text-align: center;
+    opacity: .1;
 }
 #row-clear {
     clear: both;
@@ -267,8 +288,11 @@ p:hover {
 }
 a:hover {
     border-radius: 30%;
-    padding: 2%;
-    font-size: 130%;
+    border: solid 2px;
+    border-color: red;
+}
+a {
+    padding: 1em;
 }
 p:hover,
 a:hover {
@@ -310,6 +334,20 @@ a:hover,
     }
 }
 @media only screen and (max-width: 750px) {
+        #skills,
+        #topContacts {
+        display: none;
+    }
+    #lets-connect {
+        opacity: 1;
+    }
+    button {
+       opacity: 9;
+    }
+    #header {
+        font-size: 70%;
+        background-color: black;
+    }
     #name {
         font-size: 180%;
     }
@@ -360,6 +398,10 @@ a:hover,
         height: 400px;
         width: 100%;
         padding-bottom: 5%;
+    }
+    button {
+        background-color: turquoise;
+        padding: .5em;
     }
 }
 @media only screen and (min-width: 750px) {

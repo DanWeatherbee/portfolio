@@ -19,33 +19,37 @@
     <!-- Because this app is running on a secure server I had to change http to https to get maps to run.
 When I used the console to debug it, I got the information I needed -->
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y"></script>
     <script src="js/helper.js"></script>
 </head>
 
 <body class="center-block img-responsive">
     <div class="container center-block img-responsive" id="main">
-        <div class="row center-content clear-fix" id="header">
+        <div class="row center-content clear-fix text-center" id="header">
             <ul id="topContacts" class="flex-box"></ul>
         </div>
         <div id="row-clear" class="row cubic-bezier"></div>
+        <div class="nav text-center">
+            <button id="button-show-work" class="cubic-bezier">Work</button>
+            <button id="button-show-projects" class="cubic-bezier">Projects</button>
+            <button id="button-show-education" class="cubic-bezier">Education</button>
+            <button id="button-show-map" class="cubic-bezier">Map</button>
+        </div>
         <div id="work-experience" class="row gray cubic-bezier tranparent-on">
             <h2 id="work-header" class="red-headers">Work Experience</h2>
             <span><em>Click Header to Toggle View</em></span>
         </div>
-        <button id="button-show-work">Show Work</button>
         <div id="projects" class="row cubic-bezier">
             <h2 id="projects-header" class="red-headers">Projects</h2>
             <span><em>Click Header to Toggle View</em></span>
         </div>
-        <button id="button-show-projects">Show Projects</button>
         <div id="education" class="row gray cubic-bezier tranparent-on">
             <h2 id="education-header" class="red-headers">Education</h2>
             <span><em>Click Header to Toggle View</em></span>
         </div>
-        <button id="button-show-education">Show Education</button>
         <div id="map-container" class="row cubic-bezier">
-            <h2 id="live-work-header">Where I've Lived and Worked</h2>
+            <h2 id="live-work-header" class="red-headers">Where I've Lived and Worked</h2>
+            <span><em>Click Header to Toggle View</em></span>
             <div id="map">
             </div>
         </div>

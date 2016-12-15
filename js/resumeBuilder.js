@@ -3,7 +3,7 @@ var index_zero = 0;
 var index_one = 1;
 var bio = {
     "name": "Dan Weatherbee",
-    "role": "Web Developer",
+    "role": "Front End Web Developer",
     "contacts": {
         "mobile": "250-307-6272",
         "email": "dan@jedi-clan.us",
@@ -120,11 +120,13 @@ var init = function() {
         " and updating this project to Modern Standards.");
     bio.display = function() {
         formattedBioName = HTMLcontactGeneric.replace("%data%", bio.name);
-        formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-        formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-        formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-        formattedlinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
-        formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        formattedMobile = HTMLmobile.replace("%data%", '<a href="#mobile" id="a-link">' + bio.contacts.mobile + '</a>');
+        formattedEmail = HTMLemail.replace("%data%", '<a href="#email" id="a-link">' + bio.contacts.email + '</a>');
+        formattedGithub = HTMLgithub.replace("%data%", '<a href="https://github.com/DanWeatherbee" id="a-link">' +
+         bio.contacts.github + '</a>');
+        formattedlinkedin = HTMLlinkedin.replace("%data%", '<a href="https://www.linkedin.com/in/danweatherbee-web-developer" id="a-link">' +
+         bio.contacts.linkedin + '</a>');
+        formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' + bio.contacts.location + '</a>');
         // created a variable to save on repetition
         var formattedArray = (formattedMobile + formattedEmail + formattedGithub + formattedlinkedin + formattedLocation);
         $("#topContacts").append(formattedArray);
@@ -273,6 +275,16 @@ var init = function() {
 
     projects.display();
     $("#map").append(googleMap);
+    $("#map-container").fadeToggle();
+    $("#button-show-map").fadeToggle();
+    $("#live-work-header").click(function() {
+        $("#map-container").fadeToggle();
+        $("#button-show-map").fadeToggle();
+    });
+    $("#button-show-map").click(function() {
+        $("#map-container").fadeToggle();
+        $("#button-show-map").fadeToggle();
+    });
 
 };
 init();
