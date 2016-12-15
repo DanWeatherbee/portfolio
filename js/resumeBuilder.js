@@ -7,8 +7,9 @@ var bio = {
     "contacts": {
         "mobile": "250-307-6272",
         "email": "dan@jedi-clan.us",
-        "github": "/danweatherbee",
-        "linkedin": "/danweatherbee",
+        "github": "Profile",
+        "linkedin": "Profile",
+        "udacity": "Profile",
         "location": "Vernon BC Canada"
     },
     "welcomeMessage": "Front End Ninja",
@@ -126,9 +127,15 @@ var init = function() {
          bio.contacts.github + '</a>');
         formattedlinkedin = HTMLlinkedin.replace("%data%", '<a href="https://www.linkedin.com/in/danweatherbee-web-developer" id="a-link">' +
          bio.contacts.linkedin + '</a>');
-        formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' + bio.contacts.location + '</a>');
+
+        formattedUdacity = HTMLudacity.replace("%data%", '<a href="https://profiles.udacity.com/u/dan15" id="a-link">' +
+         bio.contacts.udacity + '</a>');
+
+        formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' +
+         bio.contacts.location + '</a>');
         // created a variable to save on repetition
-        var formattedArray = (formattedMobile + formattedEmail + formattedGithub + formattedlinkedin + formattedLocation);
+        var formattedArray = (formattedMobile + formattedEmail + formattedGithub +
+         formattedlinkedin + formattedUdacity + formattedLocation);
         $("#topContacts").append(formattedArray);
         $("#footerContacts").append(formattedArray);
         formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);

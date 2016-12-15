@@ -6,6 +6,7 @@ var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span>%data%</span></li>';
 var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span><span>%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span>%data%</span></li>';
+var HTMLudacity = '<li class="flex-item"><span class="orange-text">udacity</span><span>%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span>%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span>%data%</span></li>';
 
