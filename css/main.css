@@ -225,14 +225,14 @@ span {
 #row-clear {
     clear: both;
 }
-#map {
+#map-container {
     position: relative;
     display: block;
     height: 83%;
     width: 83%;
     margin: 0 5%;
 }
-#mapDiv {
+#map {
     position: relative;
     height: 400px;
     width: 100%;
@@ -348,14 +348,14 @@ a:hover,
     h4 {
         font-size: 2.3em;
     }
-    #map {
+    #map-container {
         position: relative;
         display: block;
         height: 83%;
         width: 100%;
         margin: 0 5%;
     }
-    #mapDiv {
+    #map {
         position: relative;
         height: 400px;
         width: 100%;

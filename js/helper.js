@@ -91,7 +91,7 @@ function initializeMap() {
 
     /*
     For the map to be displayed, the googleMap var must be
-    appended to #mapDiv in resumeBuilder.js.
+    appended to #map in resumeBuilder.js.
     */
     map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 

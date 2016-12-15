@@ -21,7 +21,6 @@ When I used the console to debug it, I got the information I needed -->
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y"></script>
     <script src="js/helper.js"></script>
-    <script src="js/resumeBuilder-min.js"></script>
 </head>
 
 <body class="center-block img-responsive">
@@ -45,7 +44,7 @@ When I used the console to debug it, I got the information I needed -->
             <span><em>Click Header to Toggle View</em></span>
         </div>
         <button id="button-show-education">Show Education</button>
-        <div id="mapDiv" class="row cubic-bezier">
+        <div id="map-container" class="row cubic-bezier">
             <h2 id="live-work-header">Where I've Lived and Worked</h2>
             <div id="map">
             </div>
@@ -77,7 +76,7 @@ When I used the console to debug it, I got the information I needed -->
             document.getElementById('lets-connect').style.backgroundColor = 'black';
         }
         if (document.getElementById('map') === null) {
-            document.getElementById('mapDiv').style.backgroundColor = 'black';
+            document.getElementById('map').style.backgroundColor = 'black';
         }
     </script>
     <!-- end of container -->

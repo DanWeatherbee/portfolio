@@ -272,7 +272,7 @@ var init = function() {
     };
 
     projects.display();
-    $("#mapDiv").append(googleMap);
+    $("#map").append(googleMap);
 
 };
 init();
