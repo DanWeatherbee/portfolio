@@ -2,13 +2,13 @@ var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%<
 var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">contact</span><span>%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span>%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span>%data%</span></li>';
-var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span><span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span>%data%</span></li>';
-var HTMLudacity = '<li class="flex-item"><span class="orange-text">udacity</span><span>%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span>%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span>%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile</span><span>%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">Email</span><span>%data%</span></li>';
+var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">Linkedin</span><span>%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">Github</span><span>%data%</span></li>';
+var HTMLudacity = '<li class="flex-item"><span class="orange-text">Udacity</span><span>%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">Blog</span><span>%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">Location</span><span>%data%</span></li>';
 
 var HTMLbioPic = '<div id="biopic-col" class="col-md-1"><img src="%data%" class="biopic"></div>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';

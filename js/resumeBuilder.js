@@ -66,25 +66,25 @@ var education = {
 
 var work = {
     "jobs": [{
-        "employer": "Udacity",
+        "employer": "Sample",
         "title": "Course Developer",
         "location": "Mountain View, CA",
         "dates": "Feb 2014 - Current",
         "description": "Sample data"
     }, {
-        "employer": "LearnBIG",
+        "employer": "Sample",
         "title": "Software Engineer",
         "location": "Seattle, WA",
         "dates": "May 2013 - Jan 2014",
         "description": "Sample data"
     }, {
-        "employer": "LEAD Academy Charter High School",
+        "employer": "Sample",
         "title": "Science Teacher",
         "location": "Nashville, TN",
         "dates": "Jul 2012 - May 2013",
         "description": "Sample data"
     }, {
-        "employer": "Stratford High School",
+        "employer": "Sample",
         "title": "Science Teacher",
         "location": "Nashville, TN",
         "dates": "Jun 2009 - Jun 2012",
@@ -93,7 +93,17 @@ var work = {
 };
 
 var projects = {
-    "project": [{
+    "project": [ {
+        "title": "<a href='http://danweatherbee-front-end-web-developer.com/' id='a-link'>" +
+            "Professional Portfolio</a>",
+        "dates": "Dec 10 2016",
+        "description": "Portfolio Using jQuery, developed an interactive resume application" +
+        " that reads all data from a JSON file and then dynamically modifies" +
+        " the DOM to display the information. Further customized the project" +
+        " by personalizing the design using CSS and the Bootstrap Framework",
+        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
+    },
+    {
         "title": "<a href='https://danweatherbee.github.io/app-p6/' id='a-link'>" +
             "Feed Reader Testing P6 FEND</a>",
         "dates": "Dec 1 2016",
@@ -111,6 +121,33 @@ var projects = {
         " selected, additional information about a landmark is presented from the" +
         " FourSquare and Flickr APIs.",
         "images": ["images/medium/app-5-gif.gif", "images/medium/app-5.png"]
+    },
+    {
+        "title": "<a href='https://danweatherbee.github.io/app-p4/' id='a-link'>" +
+            "Website Optimization P4 FEND</a>",
+        "dates": "2016",
+        "description": "app-p4 FEND Optimized an inefficient web application's JavaScript," +
+        " CSS and assets delivery, ensuring it runs at 60 fps and achieves a PageSpeed" +
+        " score of at least 95.",
+        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
+    },
+    {
+        "title": "<a href='https://danweatherbee.github.io/app-p3/' id='a-link'>" +
+            "Frontend Nanodegree Arcade Game P3 FEND</a>",
+        "dates": "2016",
+        "description": "app-p3 FEND An HTML5 Canvas powered video game," +
+        " developed using the best practices in Object Oriented JavaScript.",
+        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
+    },
+    {
+        "title": "<a href='https://danweatherbee.github.io/app-p2/' id='a-link'>" +
+            "Build a Portfolio P2 FEND</a>",
+        "dates": "2016",
+        "description": "app-p2 FEND Using jQuery, developed an interactive resume" +
+        " application that reads all data from a JSON file and then dynamically" +
+        " modifies the DOM to display the information. Further customized the " +
+        "project by personalizing the design using CSS.",
+        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
     }]
 };
 
