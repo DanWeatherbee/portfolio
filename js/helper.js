@@ -34,7 +34,7 @@ var HTMLschoolName = '%data%';
 var HTMLschoolDegree = ' -- %data%';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><p>Major: %data%</p></em>';
+var HTMLschoolMajor = '<em><p>Graduated: %data%</p></em>';
 var HTMLschoolUrl = '<br><a href="#education" id="a-link"><em>Url: %data%</em></a><br><hr>';
 
 var HTMLonlineClasses = '<h3 class="red-headers">Online Classes</h3>';
@@ -69,20 +69,21 @@ $(document).click(function(loc) {
     logClicks(x, y);
 });
 
+// Eror handler in case api fails
+ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection"
+function googleFail() {
+  $("#button-show-map").fadeToggle();
+  console.log(ERROR);
+  alert(ERROR);
+}
+// first step we call initializeMap after the API success
+function googleSuccess() {
+    initializeMap();
+}
 
-
-/*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference
-*/
 var map; // declares a global map variable
 
-
-/*
-Start here! initializeMap() is called when page is loaded.
-*/
-function initializeMap() {
+ var initializeMap = function() {
 
     var locations;
 
@@ -105,8 +106,17 @@ function initializeMap() {
 
         // initializes an empty array
         var locations = [];
+// TODO because of async sometimes bio is not loaded in time.
 
+        // error handler to test if bio is defined.
+        try {
+            bio.contacts.location;
+             } catch(e) {
+                $("#button-show-map").fadeToggle();
+                console.log("could not retrieve location.");
+            }
         // adds the single location property from bio to the locations array
+
         locations.push(bio.contacts.location);
 
         // iterates through school locations and appends each location to
@@ -213,13 +223,6 @@ function initializeMap() {
     pinPoster(locations);
 
 }
-
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
-
-// Calls the initializeMap() function when the page loads
-window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds

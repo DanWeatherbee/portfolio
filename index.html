@@ -2,25 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" content="Dans app">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#db5945">
+    <meta name="msapplication-square310x310logo" content="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dan Weatherbee's Portfolio</title>
     <!--   Style Sheets -->
-    <!--   Google Fonts Link -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet' type='text/css'>
-    <!--     <link rel="stylesheet" href="css/style.css"> this is the orginal, if you use this you can see the normal version -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
     <!--            bootstrap framework -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!--   Java Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- Because this app is running on a secure server I had to change http to https to get maps to run.
-When I used the console to debug it, I got the information I needed -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y"></script>
     <script src="js/helper.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y&v=3&callback=googleSuccess" +
+        onerror="googleFail()">
+    </script>
+
 </head>
 
 <body class="center-block img-responsive">
