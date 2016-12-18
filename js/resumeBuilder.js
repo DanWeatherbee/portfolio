@@ -316,20 +316,7 @@ var init = function() {
             }
         });
     };
-
     projects.display();
-    $("#map").append(googleMap);
-    $("#map-container").fadeToggle();
-    $("#button-show-map").fadeToggle();
-    $("#live-work-header").click(function() {
-        $("#map-container").fadeToggle();
-        $("#button-show-map").fadeToggle();
-    });
-    $("#button-show-map").click(function() {
-        $("#map-container").fadeToggle();
-        $("#button-show-map").fadeToggle();
-    });
-
 };
 init();
 

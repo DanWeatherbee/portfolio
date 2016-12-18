@@ -77,8 +77,22 @@ function googleFail() {
   alert(ERROR);
 }
 // first step we call initializeMap after the API success
+// added a time out function to load api and then append element and show buttons
 function googleSuccess() {
-    initializeMap();
+    setTimeout(function(){
+    $("#button-show-map").fadeToggle();
+      }, 3000);
+    $("#map").append(googleMap);
+    $("#map-container").fadeToggle();
+    $("#live-work-header").click(function() {
+        $("#map-container").fadeToggle();
+        $("#button-show-map").fadeToggle();
+    });
+    $("#button-show-map").click(function() {
+        $("#map-container").fadeToggle();
+        $("#button-show-map").fadeToggle();
+        initializeMap();
+    });
 }
 
 var map; // declares a global map variable
