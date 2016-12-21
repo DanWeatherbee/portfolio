@@ -66,29 +66,17 @@ var education = {
 
 var work = {
     "jobs": [{
-        "employer": "Sample",
-        "title": "Course Developer",
-        "location": "Mountain View, CA",
-        "dates": "Feb 2014 - Current",
-        "description": "Sample data"
+        "employer": "Pioneer Janitorial Services LTD",
+        "title": "Janitorial Technician",
+        "location": "Vernon, BC",
+        "dates": "Sept 2011 - Present",
+        "description": "Organized and Systematized daily operations."
     }, {
-        "employer": "Sample",
-        "title": "Software Engineer",
-        "location": "Seattle, WA",
-        "dates": "May 2013 - Jan 2014",
-        "description": "Sample data"
-    }, {
-        "employer": "Sample",
-        "title": "Science Teacher",
-        "location": "Nashville, TN",
-        "dates": "Jul 2012 - May 2013",
-        "description": "Sample data"
-    }, {
-        "employer": "Sample",
-        "title": "Science Teacher",
-        "location": "Nashville, TN",
-        "dates": "Jun 2009 - Jun 2012",
-        "description": "Sample data"
+        "employer": "Thompson Janitorial Services LTD",
+        "title": "Janitorial Technician",
+        "location": "Vernon, BC",
+        "dates": "Jan 2009 - Sept 2011",
+        "description": "Operated machines and maintained  the building."
     }]
 };
 
