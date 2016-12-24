@@ -291,14 +291,23 @@ span {
     bottom: 25%;
     padding: 2%;
     font-size: 1.5em;
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+    border-radius: 4px 72px 72px 72px;
+    -moz-border-radius: 4px 72px 72px 72px;
+    -webkit-border-radius: 4px 72px 72px 72px;
+    border: 7px solid #52aeff;
 }
 .flip {
-  -webkit-transform-origin: 50% 0%;
-  -o-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: perspective(350px) rotateX(-90deg);
-  -o-transform: perspective(350px) rotateX(-90deg);
-  transform: perspective(350px) rotateX(-90deg);
+      -webkit-transform-origin: 50% 0%;
+      -o-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-transform: perspective(350px) rotateX(-90deg);
+      -o-transform: perspective(350px) rotateX(-90deg);
+      transform: perspective(350px) rotateX(-90deg);
+    border: solid 10px;
+    border-color: red;
 }
 /* Media queries to handle various device widths */
 

@@ -4,6 +4,7 @@ var index_one = 1;
 var bio = {
     "name": "Dan Weatherbee",
     "role": "Front End Web Developer",
+    "about": "I have been building, creating, deconstructing, reconstructing, and reverse engineering just for the thrill of it. I have extensive knowledge of Image, Video, Game Editors; I have highly developed communication, problem solving and debugging skills. I have a solid understanding of JavaScript, HTML5, and CSS3. I have additional experience with database types and CMS Deployment and Apache. I am highly motivated and goal-oriented. I can effectively communicate with the creative team and clients. With my skills and experiences, I am confident we can build amazing things together. The best way to contact me is by email or phone. Best regards, yours truly Dan Weatherbee. -  Click this window to Close.",
     "contacts": {
         "mobile": "250-307-6272",
         "email": "dan@jedi-clan.us",
@@ -183,8 +184,10 @@ var init = function() {
 
         formattedName = HTMLheaderName.replace("%data%", bio.name);
         formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+        formattedAboutMe = HTMLaboutMe.replace("%data%", bio.about);
         $("#header").prepend(formattedRole);
         $("#header").prepend(formattedName);
+        $("#header").prepend(formattedAboutMe);
     };
 
     bio.display();
