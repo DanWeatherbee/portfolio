@@ -280,6 +280,26 @@ span {
 .tranparent-on {
     background-color: transparent;
 }
+#about-me {
+    height: 50%;
+    width: 50%;
+    background-color: black;
+    color: lawngreen;
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    bottom: 25%;
+    padding: 2%;
+    font-size: 1.5em;
+}
+.flip {
+  -webkit-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: perspective(350px) rotateX(-90deg);
+  -o-transform: perspective(350px) rotateX(-90deg);
+  transform: perspective(350px) rotateX(-90deg);
+}
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 3024px) {
@@ -335,6 +355,9 @@ span {
     }
     p:hover {
         font-size: 200%;
+    }
+    #about-me {
+        display: none;
     }
 }
 @media only screen and (max-width: 900px) {

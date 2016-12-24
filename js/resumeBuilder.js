@@ -70,13 +70,13 @@ var work = {
         "title": "Janitorial Technician",
         "location": "Vernon, BC",
         "dates": "Sept 2011 - Present",
-        "description": "Organized and Systematized daily operations."
+        "description": "* Organized and Systematized daily operations. * Shorted the time it takes to complete with less effort."
     }, {
         "employer": "Thompson Janitorial Services LTD",
         "title": "Janitorial Technician",
         "location": "Vernon, BC",
         "dates": "Jan 2009 - Sept 2011",
-        "description": "Operated machines and maintained  the building."
+        "description": "* Operated machines and maintained  the building. * Simplified tasks and increased productivity and profit."
     }]
 };
 

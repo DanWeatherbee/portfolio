@@ -93,6 +93,10 @@ function googleSuccess() {
         $("#button-show-map").fadeToggle();
         initializeMap();
     });
+    $("#about-me").click(function() {
+        $("#about-me").addClass('flip');
+        initializeMap();
+    });
 }
 
 var map; // declares a global map variable
