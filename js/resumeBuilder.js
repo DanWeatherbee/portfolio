@@ -188,6 +188,9 @@ var init = function() {
         $("#header").prepend(formattedRole);
         $("#header").prepend(formattedName);
         $("#header").prepend(formattedAboutMe);
+        $("#about-me").click(function() {
+        $("#about-me").addClass('flip');
+    });
     };
 
     bio.display();
