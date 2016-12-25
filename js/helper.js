@@ -1,6 +1,6 @@
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
 var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
-var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%</div>'
+var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>'
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">contact</span><span>%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile</span><span>%data%</span></li>';

@@ -140,6 +140,31 @@ var projects = {
     }]
 };
 
+// new code for sound
+ var Sound = function(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function() {
+        this.sound.play();
+    }
+    this.stop = function() {
+        this.sound.pause();
+    }
+};
+var playSong = new Sound("sound/menu-track.mp3");
+
+$(window).resize(function() {
+    var viewportWidth = $(window).width();
+    var viewportHeight = $(window).height();
+    if (viewportWidth < 1200) {
+        playSong.stop();
+    }
+});
+
 var init = function() {
     alert("Hello, I am the Developer. My Portfolio is currently being coded" +
         " and is not Production Code. I just got my Nanodegree and now I am" +
@@ -188,11 +213,12 @@ var init = function() {
         $("#header").prepend(formattedRole);
         $("#header").prepend(formattedName);
         $("#header").prepend(formattedAboutMe);
+        playSong.play();
         $("#about-me").click(function() {
-        $("#about-me").addClass('flip');
-    });
+            $("#about-me").addClass('flip');
+            playSong.stop();
+        });
     };
-
     bio.display();
 
     // Special thanks to the reviewer for clearing up my understanding of how this works.
@@ -304,7 +330,6 @@ var init = function() {
                 formattedImage1 = HTMLprojectImage.replace("%data%", item.images[index_zero]);
                 formattedImage2 = HTMLprojectImage.replace("%data%", item.images[index_one]);
                 formattedImage = formattedImage1 + formattedImage2;
-
                 // append data
                 $(".project-entry:last").append(formattedImage);
             }
@@ -313,6 +338,4 @@ var init = function() {
     projects.display();
 };
 init();
-
-
 

@@ -281,8 +281,8 @@ span {
     background-color: transparent;
 }
 #about-me {
-    height: 50%;
-    width: 50%;
+    height: 500px;
+    width: 700px;
     background-color: black;
     color: lawngreen;
     position: absolute;
@@ -312,6 +312,14 @@ span {
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 3024px) {
+
+    .me-pic {
+        height: 170px;
+        width: 155px;
+        -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+        -moz-box-shadow: -2px 20px 24px -9px turquoise;
+        box-shadow: -2px 20px 24px -9px turquoise;
+    }
     #lets-connect {
         margin-top: 5%;
     }
