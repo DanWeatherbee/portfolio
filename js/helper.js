@@ -1,6 +1,7 @@
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
 var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
-var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>'
+var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
+'<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>'
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">contact</span><span>%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile</span><span>%data%</span></li>';
@@ -119,7 +120,7 @@ var map; // declares a global map variable
 
         // initializes an empty array
         var locations = [];
-// TODO because of async sometimes bio is not loaded in time.
+
 
         // error handler to test if bio is defined.
         try {
@@ -157,7 +158,10 @@ var map; // declares a global map variable
     about a single location.
     */
     function createMapMarker(placeData) {
-
+        // infoWindows are the little helper windows that open when you click
+        // or hover over a pin on a map. They usually contain more information
+        // about a location.
+        var infoWindow = new google.maps.InfoWindow();
         // The next lines save location data from the search result object to local variables
         var lat = placeData.geometry.location.lat(); // latitude from the place service
         var lon = placeData.geometry.location.lng(); // longitude from the place service
@@ -168,19 +172,22 @@ var map; // declares a global map variable
         var marker = new google.maps.Marker({
             map: map,
             position: placeData.geometry.location,
-            title: name
-        });
-        // infoWindows are the little helper windows that open when you click
-        // or hover over a pin on a map. They usually contain more information
-        // about a location.
-        var infoWindow = new google.maps.InfoWindow({
-            content: name + infoWindowString
+            title: name,
+            animation: google.maps.Animation.DROP
         });
 
-        // hmmmm, I wonder what this is about...
+        infoWindow.setContent(infoWindowString);
+        infoWindow.addListener('closeclick', function(){
+            map.setZoom(16);
+            map.fitBounds(bounds);
+            marker.setAnimation(google.maps.Animation.DROP);
+        })
+
         google.maps.event.addListener(marker, 'click', function() {
-            // your code goes here!
             infoWindow.open(map, marker)
+            map.setZoom(10);
+            map.panTo(marker.getPosition());
+            marker.setAnimation(google.maps.Animation.BOUNCE);
         });
 
         // this is where the pin actually gets added to the map.
@@ -189,7 +196,7 @@ var map; // declares a global map variable
         // fit the map to the new marker
         map.fitBounds(bounds);
         // center the map
-        map.setCenter(bounds.getCenter());
+        map.panTo(bounds.getCenter());
     }
 
     /*

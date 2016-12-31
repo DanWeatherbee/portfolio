@@ -83,7 +83,7 @@ var work = {
 
 var projects = {
     "project": [ {
-        "title": "<a href='http://danweatherbee-front-end-web-developer.com/' id='a-link'>" +
+        "title": "<a href='https://danweatherbee.github.io/portfolio/' id='a-link'>" +
             "Professional Portfolio</a>",
         "dates": "Dec 10 2016",
         "description": "Portfolio Using jQuery, developed an interactive resume application" +
