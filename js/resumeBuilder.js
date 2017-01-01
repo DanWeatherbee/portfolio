@@ -11,7 +11,7 @@ var bio = {
         "github": "Profile",
         "linkedin": "Profile",
         "udacity": "Profile",
-        "location": "Vernon BC Canada"
+        "location": "Okanagan Landing Vernon BC Canada"
     },
     "welcomeMessage": "Front End Ninja",
     "skills": ["AJAX",
@@ -67,15 +67,22 @@ var education = {
 
 var work = {
     "jobs": [{
+        "employer": "Freelance - Dedicated Server Network Configuration",
+        "title": "Front End Web Developer",
+        "location": "Willow Dr Vernon, BC",
+        "dates": "Jan 2017 - Present",
+        "description": "I am interested in full stack and this is my pet project to learn it. I find the back end as interesting as the front end and wish to understand it all. What I have been up to; - Learning and understanding the folder structure on a remote dedicated server. - Website creation and deployment from dedicated box up via ssh(putty). - Installed Ubuntu 16.4 on dedicated bare bones Server followed by mysql. - Created database and installed Word Press - Currently researching and learning the built in control panel webmin and its features. - Currently learning PHP(very close to regular javascript), easy to understand. - Currently learning more about mysql queries and database creation. - Currently learning about DNS, Network, nameservers, security and much more."
+    },
+    {
         "employer": "Pioneer Janitorial Services LTD",
         "title": "Janitorial Technician",
-        "location": "Vernon, BC",
+        "location": "Silver Star Vernon, BC",
         "dates": "Sept 2011 - Present",
-        "description": "* Organized and Systematized daily operations. * Shorted the time it takes to complete with less effort."
+        "description": "* Organized and Systematized daily operations. * Shortened the time it takes to complete with less effort."
     }, {
         "employer": "Thompson Janitorial Services LTD",
         "title": "Janitorial Technician",
-        "location": "Vernon, BC",
+        "location": "Kalamalka Lake Vernon, BC",
         "dates": "Jan 2009 - Sept 2011",
         "description": "* Operated machines and maintained  the building. * Simplified tasks and increased productivity and profit."
     }]
