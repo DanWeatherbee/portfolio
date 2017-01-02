@@ -4,9 +4,13 @@
 body {
     background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
 }
-/*#lets-connect {
-    opacity: .7;
-}*/
+#pano {
+    position: relative;
+    float: left;
+    height: 400px;
+    width: 100%;
+    z-index: 1;
+}
 #lets-connect:hover {
     opacity: 1;
     background-color: black;

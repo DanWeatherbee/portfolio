@@ -149,6 +149,17 @@ var map; // declares a global map variable
             locations.push(job.location);
         });
 
+        var vernon = {lat: 50.2670, lng: -119.2720};
+
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+            position: vernon,
+            pov: {
+            heading: 34,
+            pitch: 10
+            }
+          });
+        map.setStreetView(panorama);
         return locations;
     }
 
@@ -187,6 +198,7 @@ var map; // declares a global map variable
             infoWindow.open(map, marker)
             map.setZoom(10);
             map.panTo(marker.getPosition());
+            console.log(marker.getPosition());
             marker.setAnimation(google.maps.Animation.BOUNCE);
         });
 

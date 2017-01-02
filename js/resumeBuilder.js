@@ -89,17 +89,7 @@ var work = {
 };
 
 var projects = {
-    "project": [ {
-        "title": "<a href='https://danweatherbee.github.io/portfolio/' id='a-link'>" +
-            "Professional Portfolio</a>",
-        "dates": "Dec 10 2016",
-        "description": "Portfolio Using jQuery, developed an interactive resume application" +
-        " that reads all data from a JSON file and then dynamically modifies" +
-        " the DOM to display the information. Further customized the project" +
-        " by personalizing the design using CSS and the Bootstrap Framework",
-        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
-    },
-    {
+    "project": [{
         "title": "<a href='https://danweatherbee.github.io/app-p6/' id='a-link'>" +
             "Feed Reader Testing P6 FEND</a>",
         "dates": "Dec 1 2016",
@@ -133,16 +123,6 @@ var projects = {
         "dates": "2016",
         "description": "app-p3 FEND An HTML5 Canvas powered video game," +
         " developed using the best practices in Object Oriented JavaScript.",
-        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
-    },
-    {
-        "title": "<a href='https://danweatherbee.github.io/app-p2/' id='a-link'>" +
-            "Build a Portfolio P2 FEND</a>",
-        "dates": "2016",
-        "description": "app-p2 FEND Using jQuery, developed an interactive resume" +
-        " application that reads all data from a JSON file and then dynamically" +
-        " modifies the DOM to display the information. Further customized the " +
-        "project by personalizing the design using CSS.",
         "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
     }]
 };
