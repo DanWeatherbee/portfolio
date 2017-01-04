@@ -115,7 +115,7 @@ var projects = {
         "description": "app-p4 FEND Optimized an inefficient web application's JavaScript," +
         " CSS and assets delivery, ensuring it runs at 60 fps and achieves a PageSpeed" +
         " score of at least 95.",
-        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
+        "images": ["images/medium/web-performance.png", "images/medium/web-performance-2.png"]
     },
     {
         "title": "<a href='https://danweatherbee.github.io/app-p3/' id='a-link'>" +
@@ -123,7 +123,7 @@ var projects = {
         "dates": "2016",
         "description": "app-p3 FEND An HTML5 Canvas powered video game," +
         " developed using the best practices in Object Oriented JavaScript.",
-        "images": ["images/medium/no-img.png", "images/medium/no-img.png"]
+        "images": ["images/medium/arcade.png", "images/medium/arcade-2.png"]
     }]
 };
 
