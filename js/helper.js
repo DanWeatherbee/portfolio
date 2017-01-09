@@ -50,6 +50,17 @@ var googleMap = '<div id="map"></div>';
 var infoWindowString = "<div id='info' style='color: black;'><div style='color: black;'>" +
     "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img src='images/small/ninja.png'></div>\n " +
     "<div style='color: black;'>Front End Ninja</div>";
+var workExperienceElem = $('#work-experience');
+var projectsElem = $('#projects');
+var educationElem = $('#education');
+var mapContainerElem = $('#map-container');
+var letsConnectElem =  $('#lets-connect');
+var bttnShowWorkElem = $("#button-show-work");
+var bttnShowProjectsElem = $("#button-show-projects");
+var bttnShowEducationElem = $("#button-show-education");
+var projectsHeaderElem = $("#projects-header");
+var workHeaderElem = $("#work-header");
+var educationHeaderElem = $("#education-header");
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
@@ -72,27 +83,32 @@ $(document).click(function(loc) {
 // Eror handler in case api fails
 ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection"
 function googleFail() {
-  $("#button-show-map").fadeToggle();
+  $("#button-show-map").hide();
   console.log(ERROR);
   alert(ERROR);
 }
 // first step we call initializeMap after the API success
 // added a time out function to load api and then append element and show buttons
 function googleSuccess() {
+    $("#map-container").hide();
+    // Timeout to allow for google api response to arrive.
     setTimeout(function(){
-    $("#button-show-map").fadeToggle();
-      }, 3000);
-    $("#map").append(googleMap);
-    $("#map-container").fadeToggle();
-    $("#live-work-header").click(function() {
-        $("#map-container").fadeToggle();
-        $("#button-show-map").fadeToggle();
-    });
-    $("#button-show-map").click(function() {
-        $("#map-container").fadeToggle();
-        $("#button-show-map").fadeToggle();
-        initializeMap();
-    });
+        // Create elements and events after request has arrived.
+
+        $("#map").append(googleMap);
+        $("#button-show-map").fadeIn();
+
+        $("#live-work-header").click(function() {
+            $("#map-container").fadeOut();
+            $("#button-show-map").fadeIn();
+        });
+
+        $("#button-show-map").click(function() {
+            $("#map-container").fadeIn();
+            initializeMap();
+            $("#button-show-map").fadeOut();
+        });
+          }, 3000);
 }
 
 var map; // declares a global map variable
@@ -126,7 +142,7 @@ var map; // declares a global map variable
         try {
             bio.contacts.location;
              } catch(e) {
-                $("#button-show-map").fadeToggle();
+                $("#button-show-map").hide();
                 console.log("could not retrieve location.");
             }
         // adds the single location property from bio to the locations array

@@ -108,6 +108,7 @@ button {
     background-color: turquoise;
     padding: 5%;
     opacity: .3;
+    border-radius: 100%;
 }
 button:hover {
     font-size: 150%;
@@ -118,6 +119,12 @@ button:hover {
     box-shadow: -2px 20px 24px -9px turquoise;
     border: solid 10px;
     border-color: red;
+}
+
+p:hover {
+    font-size: 200%;
+    line-height: 1.5em;
+    padding: 2%;
 }
 .red-headers {
     color: red;
@@ -138,6 +145,7 @@ button:hover {
 #projects,
 #education,
 #work-experience,
+#nav,
 #button-show-map {
     display: none;
 }
@@ -326,15 +334,6 @@ span {
     }
     #lets-connect {
         margin-top: 5%;
-    }
-    p:hover {
-        font-size: 200%;
-        border: 3px;
-        border-radius: 10%;
-        border-color: turquoise;
-        padding: 1.5em;
-        letter-spacing: .3em;
-        line-height: 1.5em;
     }
     a:hover {
         border-radius: 30%;

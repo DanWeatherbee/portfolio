@@ -153,6 +153,7 @@ $(window).resize(function() {
 });
 
 var init = function() {
+
     alert("Hello, I am the Developer. My Portfolio is currently being coded" +
         " and is not Production Code. I just got my Nanodegree and now I am" +
         " filling in my real info instead of the sample data. I will also be refactoring" +
@@ -201,24 +202,11 @@ var init = function() {
         $("#header").prepend(formattedName);
         $("#header").prepend(formattedAboutMe);
         playSong.play();
-        $("#about-me").click(function() {
-            $("#about-me").addClass('flip');
-            playSong.stop();
-        });
     };
     bio.display();
-
     // Special thanks to the reviewer for clearing up my understanding of how this works.
 
     education.display = function() {
-            $("#education-header").click(function() {
-                $("#education").fadeToggle();
-                $("#button-show-education").fadeToggle();
-            });
-            $("#button-show-education").click(function() {
-                $("#education").fadeToggle();
-                $("#button-show-education").fadeToggle();
-            });
         education.schools.forEach(function(school) {
 
             // create a div to hold each school
@@ -258,14 +246,6 @@ var init = function() {
     education.display();
 
     work.display = function() {
-            $("#work-header").click(function() {
-                $("#work-experience").fadeToggle();
-                $("#button-show-work").fadeToggle();
-            });
-            $("#button-show-work").click(function() {
-                $("#work-experience").fadeToggle();
-                $("#button-show-work").fadeToggle();
-            });
         work.jobs.forEach(function(job) {
 
             // create div
@@ -288,14 +268,6 @@ var init = function() {
     work.display();
 
     projects.display = function() {
-            $("#projects-header").click(function() {
-                $("#projects").fadeToggle();
-                $("#button-show-projects").fadeToggle();
-            });
-            $("#button-show-projects").click(function() {
-                $("#projects").fadeToggle();
-                $("#button-show-projects").fadeToggle();
-            });
         projects.project.forEach(function(item) {
 
             // create div
@@ -324,5 +296,64 @@ var init = function() {
     };
     projects.display();
 };
-init();
 
+init.toggle = function () {
+    var aboutMeElem = $("#about-me");
+    var navElem =  $('#nav');
+    // Show hide flip toggle method for nav elements.
+            projectsHeaderElem.click(function() {
+                projectsElem.addClass('flip');
+                bttnShowProjectsElem.fadeIn();
+                setTimeout(function() {
+                    projectsElem.fadeOut();
+                }, 1000);
+            });
+
+            bttnShowProjectsElem.click(function() {
+                projectsElem.removeClass('flip');
+                projectsElem.fadeIn();
+                bttnShowProjectsElem.fadeOut();
+            });
+
+            workHeaderElem.click(function() {
+                workExperienceElem.addClass('flip');
+                bttnShowWorkElem.fadeIn();
+                // Gives time for animation flip before collapsing the dom.
+                setTimeout(function(){
+                    workExperienceElem.fadeOut();
+                }, 1000);
+            });
+
+            bttnShowWorkElem.click(function() {
+                workExperienceElem.removeClass('flip');
+                workExperienceElem.fadeIn();
+                bttnShowWorkElem.fadeOut();
+            });
+
+            educationHeaderElem.click(function() {
+                educationElem.addClass('flip');
+                bttnShowEducationElem.fadeIn();
+                setTimeout(function(){
+                    educationElem.fadeOut();
+                }, 1000);
+            });
+
+            bttnShowEducationElem.click(function() {
+                educationElem.removeClass('flip');
+                educationElem.fadeIn();
+                bttnShowEducationElem.fadeOut();
+            });
+
+            aboutMeElem.click(function() {
+                aboutMeElem.addClass('flip');
+                setTimeout(function(){
+                aboutMeElem.removeClass('flip');
+                aboutMeElem.hide();
+                }, 1000);
+                navElem.fadeIn();
+                playSong.stop();
+            });
+
+};
+init();
+init.toggle();
