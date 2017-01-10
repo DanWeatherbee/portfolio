@@ -57,7 +57,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <!--   Java Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
+    <script src="js/data.js"></script>
+    <script src="js/classes.js"></script>
     <script src="js/helper.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y&v=3&callback=googleSuccess" +
         onerror="googleFail()">
@@ -77,6 +78,7 @@
          $(window).load(function() {
              $('#about-me').append('<h4>' + "Time until everything loaded: ", Date.now()-timerStart + '</h4>');
          });
+         playSong.play();
     </script>
 </body>
 </html>

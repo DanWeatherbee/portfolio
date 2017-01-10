@@ -61,24 +61,6 @@ var bttnShowEducationElem = $("#button-show-education");
 var projectsHeaderElem = $("#projects-header");
 var workHeaderElem = $("#work-header");
 var educationHeaderElem = $("#education-header");
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
-clickLocations = [];
-
-function logClicks(x, y) {
-    clickLocations.push({
-        x: x,
-        y: y
-    });
-}
-
-$(document).click(function(loc) {
-    // your code goes here!
-    var x = loc.pageX;
-    var y = loc.pageY;
-    logClicks(x, y);
-});
 
 // Eror handler in case api fails
 ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection"
@@ -87,6 +69,7 @@ function googleFail() {
   console.log(ERROR);
   alert(ERROR);
 }
+
 // first step we call initializeMap after the API success
 // added a time out function to load api and then append element and show buttons
 function googleSuccess() {
