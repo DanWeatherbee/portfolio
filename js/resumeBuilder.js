@@ -126,7 +126,7 @@ var projects = {
         "images": ["images/medium/arcade.png", "images/medium/arcade-2.png"]
     }]
 };
-
+$("#test-suite").hide();
 // new code for sound
  var Sound = function(src) {
     this.sound = document.createElement("audio");
@@ -153,12 +153,15 @@ $(window).resize(function() {
 });
 
 var init = function() {
-
-    alert("Hello, I am the Developer. My Portfolio is currently being coded" +
-        " and is not Production Code. I just got my Nanodegree and now I am" +
-        " filling in my real info instead of the sample data. I will also be refactoring" +
-        " and updating this project to Modern Standards.");
+            // error handler to test if bio is defined.
+    try {
+        bio;
+         } catch(e) {
+            $("#test-suite").show();
+            $("#test-suite").append('<h4>Bio is defined ---> Failed!</h4>');
+        }
     bio.display = function() {
+
         formattedBioName = HTMLcontactGeneric.replace("%data%", bio.name);
         formattedMobile = HTMLmobile.replace("%data%", '<a href="#mobile" id="a-link">' + bio.contacts.mobile + '</a>');
         formattedEmail = HTMLemail.replace("%data%", '<a href="#email" id="a-link">' + bio.contacts.email + '</a>');
@@ -268,6 +271,7 @@ var init = function() {
     work.display();
 
     projects.display = function() {
+
         projects.project.forEach(function(item) {
 
             // create div
@@ -357,3 +361,4 @@ init.toggle = function () {
 };
 init();
 init.toggle();
+// TODO add windows timing and error check suite.

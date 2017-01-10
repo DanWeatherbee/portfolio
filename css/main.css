@@ -4,6 +4,20 @@
 body {
     background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
 }
+#test-suite {
+    background-color: blue;
+    color: white;
+    position: fixed;
+    right: 0;
+    opacity: .5;
+}
+#test-suite:hover {
+    background-color: darkblue;
+    color: red;
+    position: fixed;
+    right: 0;
+    opacity: .9;
+}
 #pano {
     position: relative;
     float: left;

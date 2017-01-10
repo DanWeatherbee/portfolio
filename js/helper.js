@@ -142,7 +142,7 @@ var map; // declares a global map variable
         try {
             bio.contacts.location;
              } catch(e) {
-                $("#button-show-map").hide();
+                $("#button-show-map").fadeToggle();
                 console.log("could not retrieve location.");
             }
         // adds the single location property from bio to the locations array

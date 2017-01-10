@@ -9,8 +9,13 @@
     <meta name="msapplication-square310x310logo" content="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dan Weatherbee's Portfolio</title>
+    <!-- Date stamp to time dom loading. -->
+    <script>
+        var timerStart = Date.now();
+    </script>
 </head>
 <body class="center-block img-responsive">
+    <h3 id="test-suite">Error</h3>
     <div id="graphs" class="container center-block img-responsive" id="main">
         <div class="row center-content clear-fix text-center" id="header">
             <ul id="topContacts" class="flex-box"></ul>
@@ -64,5 +69,14 @@
         <!--   Style Sheets -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- Window load timer end. -->
+    <script>
+         $(document).ready(function() {
+            $('#about-me').append('<h4>' + "Time until DOMready: ", Date.now()-timerStart + '</h4>');
+         });
+         $(window).load(function() {
+             $('#about-me').append('<h4>' + "Time until everything loaded: ", Date.now()-timerStart + '</h4>');
+         });
+    </script>
 </body>
 </html>
