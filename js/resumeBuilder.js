@@ -213,6 +213,7 @@ init.toggle = function () {
             });
 
             aboutMeElem.click(function() {
+                $('.landing').addClass('flip');
                 aboutMeElem.addClass('flip');
                 setTimeout(function(){
                 aboutMeElem.removeClass('flip');

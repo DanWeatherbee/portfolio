@@ -4,6 +4,14 @@
 body {
     background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
 }
+.landing {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: lawngreen;
+    z-index: 1;
+    position: fixed;
+}
 #test-suite {
     background-color: blue;
     color: white;
