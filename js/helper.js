@@ -1,74 +1,5 @@
-var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
-var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
-var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
-'<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>'
-
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">contact</span><span>%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile</span><span>%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">Email</span><span>%data%</span></li>';
-var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">Linkedin</span><span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">Github</span><span>%data%</span></li>';
-var HTMLudacity = '<li class="flex-item"><span class="orange-text">Udacity</span><span>%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">Blog</span><span>%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">Location</span><span>%data%</span></li>';
-
-var HTMLbioPic = '<div id="biopic-col" class="col-md-1"><img src="%data%" class="biopic"></div>';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
-
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span id="skills-span" class="text-uppercase">%data%</span></li>';
-
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" id="a-link">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
-
-var HTMLprojectStart = '<div class="project-entry"></div><hr>';
-var HTMLprojectTitle = '<a href="#" id="a-link">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img id="project-img" class="responsive-images" src="%data%" alt="project imgage">';
-
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '%data%';
-var HTMLschoolDegree = ' -- %data%';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><p>Graduated: %data%</p></em>';
-var HTMLschoolUrl = '<br><a href="#education" id="a-link"><em>Url: %data%</em></a><br><hr>';
-
-var HTMLonlineClasses = '<h3 class="red-headers">Online Classes</h3>';
-var HTMLonlineTitle = '%data%';
-var HTMLonlineSchool = ' - %data%<br>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="https://www.udacity.com" id="a-link">%data%</a><br><hr>';
-
-var internationalizeButton = '<div id="copyright" class="row text-center">Copyright Dan Weatherbee<div>';
-var googleMap = '<div id="map"></div>';
-var infoWindowString = "<div id='info' style='color: black;'><div style='color: black;'>" +
-    "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img src='images/small/ninja.png'></div>\n " +
-    "<div style='color: black;'>Front End Ninja</div>";
-var workExperienceElem = $('#work-experience');
-var projectsElem = $('#projects');
-var educationElem = $('#education');
-var mapContainerElem = $('#map-container');
-var letsConnectElem =  $('#lets-connect');
-var bttnShowWorkElem = $("#button-show-work");
-var bttnShowProjectsElem = $("#button-show-projects");
-var bttnShowEducationElem = $("#button-show-education");
-var projectsHeaderElem = $("#projects-header");
-var workHeaderElem = $("#work-header");
-var educationHeaderElem = $("#education-header");
-var formattedArray;
-var index_zero = 0;
-var index_one = 1;
-var playSong;
-var viewportWidth;
-var viewportHeight;
+"use strict";
 // Eror handler in case api fails
-ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection"
 function googleFail() {
   $("#button-show-map").hide();
   console.log(ERROR);
@@ -99,13 +30,9 @@ function googleSuccess() {
           }, 3000);
 }
 
-var map; // declares a global map variable
+ initializeMap = function() {
 
- var initializeMap = function() {
-
-    var locations;
-
-    var mapOptions = {
+    mapOptions = {
         disableDefaultUI: true
     };
 
@@ -121,11 +48,6 @@ var map; // declares a global map variable
     written for bio, education, and work.
     */
     function locationFinder() {
-
-        // initializes an empty array
-        var locations = [];
-
-
         // error handler to test if bio is defined.
         try {
             bio.contacts.location;
@@ -153,9 +75,9 @@ var map; // declares a global map variable
             locations.push(job.location);
         });
 
-        var vernon = {lat: 50.2670, lng: -119.2720};
+        vernon = {lat: 50.2670, lng: -119.2720};
 
-        var panorama = new google.maps.StreetViewPanorama(
+        panorama = new google.maps.StreetViewPanorama(
             document.getElementById('pano'), {
             position: vernon,
             pov: {
@@ -176,15 +98,15 @@ var map; // declares a global map variable
         // infoWindows are the little helper windows that open when you click
         // or hover over a pin on a map. They usually contain more information
         // about a location.
-        var infoWindow = new google.maps.InfoWindow();
+        infoWindow = new google.maps.InfoWindow();
         // The next lines save location data from the search result object to local variables
-        var lat = placeData.geometry.location.lat(); // latitude from the place service
-        var lon = placeData.geometry.location.lng(); // longitude from the place service
-        var name = placeData.formatted_address; // name of the place from the place service
-        var bounds = window.mapBounds; // current boundaries of the map window
+        lat = placeData.geometry.location.lat(); // latitude from the place service
+        lon = placeData.geometry.location.lng(); // longitude from the place service
+        name = placeData.formatted_address; // name of the place from the place service
+        bounds = window.mapBounds; // current boundaries of the map window
 
         // marker is an object with additional data about the pin for a single location
-        var marker = new google.maps.Marker({
+        marker = new google.maps.Marker({
             map: map,
             position: placeData.geometry.location,
             title: name,
@@ -233,12 +155,12 @@ var map; // declares a global map variable
 
         // creates a Google place search service object. PlacesService does the work of
         // actually searching for location data.
-        var service = new google.maps.places.PlacesService(map);
+        service = new google.maps.places.PlacesService(map);
 
         // Iterates through the array of locations, creates a search object for each location
         locations.forEach(function(place) {
             // the search request object
-            var request = {
+            request = {
                 query: place
             };
 
@@ -258,11 +180,14 @@ var map; // declares a global map variable
     // the locations array
     pinPoster(locations);
 
+
+
+    // Vanilla JS way to listen for resizing of the window
+    // and adjust map bounds
+    window.addEventListener('resize', function(e) {
+        //Make sure the map bounds get updated on page resize
+        map.fitBounds(mapBounds);
+    });
 }
 
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
-window.addEventListener('resize', function(e) {
-    //Make sure the map bounds get updated on page resize
-    map.fitBounds(mapBounds);
-});
+

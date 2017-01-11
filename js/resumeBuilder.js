@@ -1,4 +1,4 @@
-
+"use strict";
 test.hide();
 
 $(window).resize(function() {
@@ -12,16 +12,15 @@ $(window).resize(function() {
     }
 });
 
-var init = function() {
+init = function() {
             // error handler to test if bio is defined.
     try {
-        bio;
+        bio.name;
          } catch(e) {
             test.show();
             test.add('<h4>Bio is defined ---> Failed!</h4>');
         }
     bio.display = function() {
-
         formattedBioName = HTMLcontactGeneric.replace("%data%", bio.name);
         formattedMobile = HTMLmobile.replace("%data%", '<a href="#mobile" id="a-link">' + bio.contacts.mobile + '</a>');
         formattedEmail = HTMLemail.replace("%data%", '<a href="#email" id="a-link">' + bio.contacts.email + '</a>');
@@ -50,8 +49,8 @@ var init = function() {
         // create a div
         header.add(HTMLskillsStart);
 
-        var lenght_of_array = bio.skills.length;
-        for (var i = 0; i < lenght_of_array; i++) {
+        lenght_of_array = bio.skills.length;
+        for (i = 0; i < lenght_of_array; i++) {
 
             // format the data
             formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
@@ -167,8 +166,8 @@ init.toggle = function () {
     education.display();
     work.display();
     projects.display();
-    var aboutMeElem = $('#about-me');
-    var navElem =  $('#nav');
+    aboutMeElem = $('#about-me');
+    navElem =  $('#nav');
     // Show hide flip toggle method for nav elements.
             projectsHeaderElem.click(function() {
                 projectsElem.addClass('flip');

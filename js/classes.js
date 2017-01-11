@@ -1,6 +1,16 @@
+//Declarations
+"use strict";
+var Sound;
+var playSong;
+var DomControl;
+var contact;
+var footer;
+var header;
+var test;
+
 //Classes
 
- var Sound = function(src) {
+ Sound = function(src) {
     this.sound = document.createElement("audio");
     this.sound.src = src;
     this.sound.setAttribute("preload", "auto");
@@ -15,7 +25,7 @@
 };
 playSong = new Sound("sound/menu-track.mp3");
 
-var DomControl = function(selector) {
+DomControl = function(selector) {
 
         this.selector = $(selector);
         this.add = function(formattedData) {
@@ -34,7 +44,8 @@ var DomControl = function(selector) {
             this.selector.hide();
         };
 };
-var contact = new DomControl('#top-contacts');
-var footer = new DomControl('#footer-contacts');
-var header = new DomControl('#header');
-var test = new DomControl('#test-suite');
+
+contact = new DomControl('#top-contacts');
+footer = new DomControl('#footer-contacts');
+header = new DomControl('#header');
+test = new DomControl('#test-suite');
