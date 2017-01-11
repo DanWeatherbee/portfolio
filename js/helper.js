@@ -61,7 +61,12 @@ var bttnShowEducationElem = $("#button-show-education");
 var projectsHeaderElem = $("#projects-header");
 var workHeaderElem = $("#work-header");
 var educationHeaderElem = $("#education-header");
-
+var formattedArray;
+var index_zero = 0;
+var index_one = 1;
+var playSong;
+var viewportWidth;
+var viewportHeight;
 // Eror handler in case api fails
 ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection"
 function googleFail() {

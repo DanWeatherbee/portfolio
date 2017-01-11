@@ -1,12 +1,5 @@
-// ------------------------------------ vars --------------------------------
-var index_zero = 0;
-var index_one = 1;
-var playSong;
-var Sound;
-var viewportWidth;
-var viewportHeight;
-playSong = new Sound("sound/menu-track.mp3");
-$("#test-suite").hide();
+
+test.hide();
 
 $(window).resize(function() {
     viewportWidth = $(window).width();
@@ -24,8 +17,8 @@ var init = function() {
     try {
         bio;
          } catch(e) {
-            $("#test-suite").show();
-            $("#test-suite").append('<h4>Bio is defined ---> Failed!</h4>');
+            test.show();
+            test.add('<h4>Bio is defined ---> Failed!</h4>');
         }
     bio.display = function() {
 
@@ -43,17 +36,19 @@ var init = function() {
         formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' +
          bio.contacts.location + '</a>');
         // created a variable to save on repetition
-        var formattedArray = (formattedMobile + formattedEmail + formattedGithub +
+        formattedArray = (formattedMobile + formattedEmail + formattedGithub +
          formattedlinkedin + formattedUdacity + formattedLocation);
-        $("#topContacts").append(formattedArray);
-        $("#footerContacts").append(formattedArray);
+
+        contact.add(formattedArray);
+        footer.add(formattedArray);
+
         formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
         formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-        $("#header").append(formattedBiopic);
-        $("#header").append(formattedWelcomeMsg);
+        header.add(formattedBiopic);
+        header.add(formattedWelcomeMsg);
 
         // create a div
-        $("#header").append(HTMLskillsStart);
+        header.add(HTMLskillsStart);
 
         var lenght_of_array = bio.skills.length;
         for (var i = 0; i < lenght_of_array; i++) {
@@ -63,16 +58,19 @@ var init = function() {
 
             // append the data
             $("#skills").append(formattedSkill);
-        }
 
+        }
+            // format the data
         formattedName = HTMLheaderName.replace("%data%", bio.name);
         formattedRole = HTMLheaderRole.replace("%data%", bio.role);
         formattedAboutMe = HTMLaboutMe.replace("%data%", bio.about);
-        $("#header").prepend(formattedRole);
-        $("#header").prepend(formattedName);
-        $("#header").prepend(formattedAboutMe);
+
+        // append the data
+        header.before(formattedRole);
+        header.before(formattedName);
+        header.before(formattedAboutMe);
     };
-    bio.display();
+
     // Special thanks to the reviewer for clearing up my understanding of how this works.
 
     education.display = function() {
@@ -112,7 +110,7 @@ var init = function() {
                 formattedOnlineDates1 + formattedOnlineUrl1);
         });
     };
-    education.display();
+
 
     work.display = function() {
         work.jobs.forEach(function(job) {
@@ -133,8 +131,6 @@ var init = function() {
                 formattedDescription);
         });
     };
-
-    work.display();
 
     projects.display = function() {
 
@@ -164,11 +160,14 @@ var init = function() {
             }
         });
     };
-    projects.display();
 };
 
 init.toggle = function () {
-    var aboutMeElem = $("#about-me");
+    bio.display();
+    education.display();
+    work.display();
+    projects.display();
+    var aboutMeElem = $('#about-me');
     var navElem =  $('#nav');
     // Show hide flip toggle method for nav elements.
             projectsHeaderElem.click(function() {
@@ -227,4 +226,3 @@ init.toggle = function () {
 };
 init();
 init.toggle();
-// TODO add windows timing and error check suite.

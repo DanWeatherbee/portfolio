@@ -404,7 +404,7 @@ span {
 }
 @media only screen and (max-width: 750px) {
     #skills,
-    #topContacts,
+    #top-contacts,
     .nav-buttons,
     #skills-h3 {
         display: none;
@@ -447,8 +447,8 @@ span {
     }
     p,
     #copyright,
-    #footerContacts,
-    #topContacts {
+    #footer-contacts,
+    #top-contacts {
         font-size: 1.5em;
     }
     a {
