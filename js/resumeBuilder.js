@@ -1,7 +1,8 @@
-"use strict";
+(function(){
+    "use strict";
+})();
 test.hide();
-
-$(window).resize(function() {
+$(window).resize(function () {
     viewportWidth = $(window).width();
     viewportHeight = $(window).height();
     if (viewportWidth < 1200) {
@@ -12,31 +13,31 @@ $(window).resize(function() {
     }
 });
 
-init = function() {
-            // error handler to test if bio is defined.
+init = function () {
+    // error handler to test if bio is defined.
     try {
         bio.name;
-         } catch(e) {
-            test.show();
-            test.add('<h4>Bio is defined ---> Failed!</h4>');
-        }
-    bio.display = function() {
+    } catch (e) {
+        test.show();
+        test.add('<h4>Bio is defined ---> Failed!</h4>');
+    }
+    bio.display = function () {
         formattedBioName = HTMLcontactGeneric.replace("%data%", bio.name);
         formattedMobile = HTMLmobile.replace("%data%", '<a href="#mobile" id="a-link">' + bio.contacts.mobile + '</a>');
         formattedEmail = HTMLemail.replace("%data%", '<a href="#email" id="a-link">' + bio.contacts.email + '</a>');
         formattedGithub = HTMLgithub.replace("%data%", '<a href="https://github.com/DanWeatherbee" id="a-link">' +
-         bio.contacts.github + '</a>');
+            bio.contacts.github + '</a>');
         formattedlinkedin = HTMLlinkedin.replace("%data%", '<a href="https://www.linkedin.com/in/danweatherbee-web-developer" id="a-link">' +
-         bio.contacts.linkedin + '</a>');
+            bio.contacts.linkedin + '</a>');
 
         formattedUdacity = HTMLudacity.replace("%data%", '<a href="https://profiles.udacity.com/u/dan15" id="a-link">' +
-         bio.contacts.udacity + '</a>');
+            bio.contacts.udacity + '</a>');
 
         formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' +
-         bio.contacts.location + '</a>');
+            bio.contacts.location + '</a>');
         // created a variable to save on repetition
         formattedArray = (formattedMobile + formattedEmail + formattedGithub +
-         formattedlinkedin + formattedUdacity + formattedLocation);
+            formattedlinkedin + formattedUdacity + formattedLocation);
 
         contact.add(formattedArray);
         footer.add(formattedArray);
@@ -59,7 +60,7 @@ init = function() {
             $("#skills").append(formattedSkill);
 
         }
-            // format the data
+        // format the data
         formattedName = HTMLheaderName.replace("%data%", bio.name);
         formattedRole = HTMLheaderRole.replace("%data%", bio.role);
         formattedAboutMe = HTMLaboutMe.replace("%data%", bio.about);
@@ -67,13 +68,13 @@ init = function() {
         // append the data
         header.before(formattedRole);
         header.before(formattedName);
-        header.before(formattedAboutMe);
+        landing.add(formattedAboutMe);
     };
 
     // Special thanks to the reviewer for clearing up my understanding of how this works.
 
-    education.display = function() {
-        education.schools.forEach(function(school) {
+    education.display = function () {
+        education.schools.forEach(function (school) {
 
             // create a div to hold each school
             $("#education").append(HTMLschoolStart);
@@ -93,7 +94,7 @@ init = function() {
 
         $("#education").append(HTMLonlineClasses);
 
-        education.onlineCourses.forEach(function(online) {
+        education.onlineCourses.forEach(function (online) {
 
             // create a div to hold each online course
             $("#education").append(HTMLschoolStart);
@@ -112,7 +113,7 @@ init = function() {
 
 
     work.display = function() {
-        work.jobs.forEach(function(job) {
+        work.jobs.forEach(function (job) {
 
             // create div
             $("#work-experience").append(HTMLworkStart);
@@ -131,9 +132,9 @@ init = function() {
         });
     };
 
-    projects.display = function() {
+    projects.display = function () {
 
-        projects.project.forEach(function(item) {
+        projects.project.forEach(function (item) {
 
             // create div
             $("#projects").append(HTMLprojectStart);
@@ -166,62 +167,58 @@ init.toggle = function () {
     education.display();
     work.display();
     projects.display();
-    aboutMeElem = $('#about-me');
-    navElem =  $('#nav');
+    aboutMeElem = $("#about-me");
+    landingElem = $(".landing");
+    navElem = $("#nav");
     // Show hide flip toggle method for nav elements.
-            projectsHeaderElem.click(function() {
-                projectsElem.addClass('flip');
-                bttnShowProjectsElem.fadeIn();
-                setTimeout(function() {
-                    projectsElem.fadeOut();
-                }, 1000);
-            });
+    projectsHeaderElem.click(function () {
+        bttnShowProjectsElem.fadeIn();
+        projectsElem.fadeOut();
+    });
 
-            bttnShowProjectsElem.click(function() {
-                projectsElem.removeClass('flip');
-                projectsElem.fadeIn();
-                bttnShowProjectsElem.fadeOut();
-            });
+    bttnShowProjectsElem.click(function () {
+        projectsElem.fadeIn();
+        bttnShowProjectsElem.fadeOut();
+    });
 
-            workHeaderElem.click(function() {
-                workExperienceElem.addClass('flip');
-                bttnShowWorkElem.fadeIn();
-                // Gives time for animation flip before collapsing the dom.
-                setTimeout(function(){
-                    workExperienceElem.fadeOut();
-                }, 1000);
-            });
+    workHeaderElem.click(function () {
+        workExperienceElem.addClass("flip");
+        bttnShowWorkElem.fadeIn();
+        // Gives time for animation flip before collapsing the dom.
+        setTimeout(function () {
+            workExperienceElem.fadeOut();
+        }, 1000);
+    });
 
-            bttnShowWorkElem.click(function() {
-                workExperienceElem.removeClass('flip');
-                workExperienceElem.fadeIn();
-                bttnShowWorkElem.fadeOut();
-            });
+    bttnShowWorkElem.click(function () {
+        workExperienceElem.removeClass("flip");
+        workExperienceElem.fadeIn();
+        bttnShowWorkElem.fadeOut();
+    });
 
-            educationHeaderElem.click(function() {
-                educationElem.addClass('flip');
-                bttnShowEducationElem.fadeIn();
-                setTimeout(function(){
-                    educationElem.fadeOut();
-                }, 1000);
-            });
+    educationHeaderElem.click(function () {
+        educationElem.addClass("flip");
+        bttnShowEducationElem.fadeIn();
+        setTimeout(function () {
+            educationElem.fadeOut();
+        }, 1000);
+    });
 
-            bttnShowEducationElem.click(function() {
-                educationElem.removeClass('flip');
-                educationElem.fadeIn();
-                bttnShowEducationElem.fadeOut();
-            });
+    bttnShowEducationElem.click(function () {
+        educationElem.removeClass("flip");
+        educationElem.fadeIn();
+        bttnShowEducationElem.fadeOut();
+    });
 
-            aboutMeElem.click(function() {
-                $('.landing').addClass('flip');
-                aboutMeElem.addClass('flip');
-                setTimeout(function(){
-                aboutMeElem.removeClass('flip');
-                aboutMeElem.hide();
-                }, 1000);
-                navElem.fadeIn();
-                playSong.stop();
-            });
+    landingElem.click(function () {
+        landingElem.addClass("flip");
+        setTimeout(function () {
+            landingElem.removeClass("flip");
+            landingElem.hide();
+        }, 1000);
+        navElem.fadeIn();
+        playSong.stop();
+    });
 
 };
 init();

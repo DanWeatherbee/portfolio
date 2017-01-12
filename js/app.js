@@ -1,7 +1,11 @@
+
+(function(){
+    "use strict";
+})();
 var app;
 
 
-app = function() {
+app = function () {
         // renders everything when its ready.
 
         // alert('TODO turn all functions into global objects and call them all here. Create landing div.');

@@ -1,9 +1,10 @@
 //Declarations
-"use strict";
+
+// HTML containers
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
 var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
 var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
-'<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>'
+'<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">contact</span><span>%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile</span><span>%data%</span></li>';
@@ -26,7 +27,9 @@ var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
-
+(function(){
+    "use strict";
+})();
 var HTMLprojectStart = '<div class="project-entry"></div><hr>';
 var HTMLprojectTitle = '<a href="#" id="a-link">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
@@ -47,16 +50,16 @@ var HTMLonlineSchool = ' - %data%<br>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="https://www.udacity.com" id="a-link">%data%</a><br><hr>';
 
-var internationalizeButton = '<div id="copyright" class="row text-center">Copyright Dan Weatherbee<div>';
+// Globals
 var googleMap = '<div id="map"></div>';
 var infoWindowString = "<div id='info' style='color: black;'><div style='color: black;'>" +
     "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img src='images/small/ninja.png'></div>\n " +
     "<div style='color: black;'>Front End Ninja</div>";
 var workExperienceElem = $('#work-experience');
-var projectsElem = $('#projects');
-var educationElem = $('#education');
-var mapContainerElem = $('#map-container');
-var letsConnectElem =  $('#lets-connect');
+var projectsElem = $("#projects");
+var educationElem = $("#education");
+var mapContainerElem = $("#map-container");
+var letsConnectElem =  $("#lets-connect");
 var bttnShowWorkElem = $("#button-show-work");
 var bttnShowProjectsElem = $("#button-show-projects");
 var bttnShowEducationElem = $("#button-show-education");
@@ -64,6 +67,8 @@ var projectsHeaderElem = $("#projects-header");
 var workHeaderElem = $("#work-header");
 var educationHeaderElem = $("#education-header");
 var ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection";
+
+// Mutables
 var formattedArray;
 var selector;
 var src;
@@ -124,3 +129,14 @@ var bounds;
 var marker;
 var service;
 var request;
+var landingElem;
+var Sound;
+var playSong;
+var DomControl;
+var contact;
+var footer;
+var header;
+var test;
+var landing;
+var $;
+
