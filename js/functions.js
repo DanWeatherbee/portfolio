@@ -1,14 +1,4 @@
 
-(function(){
-    "use strict";
-})();
-
-try {
-    bio.name;
-} catch (e) {
-    test.show();
-    test.add('<h4>Bio is defined ---> Failed!</h4>');
-}
 bio.display = function () {
     formattedBioName = HTMLcontactGeneric.replace("%data%", bio.name);
     formattedMobile = HTMLmobile.replace("%data%", '<a href="#mobile" id="a-link">' + bio.contacts.mobile + '</a>');

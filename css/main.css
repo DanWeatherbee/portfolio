@@ -4,6 +4,9 @@
 body {
     background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
 }
+.container:hover {
+    background: url(images/large/wallpapers-HD-lg-2560x1600.jpg)fixed no-repeat center;
+}
 .me-pic {
     height: 200px;
     width: 200px;
@@ -127,6 +130,14 @@ h6,
 #a-link:hover {
     background-color: black;
     color: lawngreen;
+    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+    -moz-box-shadow: -2px 20px 24px -9px turquoise;
+    box-shadow: -2px 20px 24px -9px turquoise;
+}
+.span-toggle {
+    color: black;
+    font-size: 1em;
+    font-weight: 900;
 }
 button {
     background-color: turquoise;
@@ -326,9 +337,14 @@ span {
     border: solid 10px;
     border-color: red;
 }
+.span-toggle {
+    font-size: 1em;
+    font-weight: 900;
+}
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 3000px) {
+@media only screen and (min-width: 1200px) {
+
     #about-me {
         font-size: 2em;
         height: 98%;
@@ -342,6 +358,13 @@ span {
         -webkit-box-shadow: -2px 20px 24px -9px turquoise;
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
+
+    }
+    .span-toggle {
+    font-size: 1em;
+    font-weight: 900;
+    background-color: turquoise;
+    border-radius: 10%;
     }
 }
 /*Labtop Ipad*/
@@ -391,6 +414,18 @@ span {
     a,
     li {
         color: lawngreen;
+    }
+
+    .span-toggle {
+    font-size: 1em;
+    font-weight: 900;
+    background-color: turquoise;
+    border-radius: 10%;
+    }
+    .container:hover,
+    body:hover {
+        background: url()fixed no-repeat center;
+        background-color: black;
     }
 }
 /*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
@@ -478,6 +513,11 @@ span {
     }
     .container,
     body {
+        background: url()fixed no-repeat center;
+        background-color: black;
+    }
+    .container:hover,
+    body:hover {
         background: url()fixed no-repeat center;
         background-color: black;
     }

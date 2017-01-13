@@ -1,9 +1,3 @@
-
-//Declarations
-(function(){
-    "use strict";
-})();
-
 //Classes
 
 Sound = function (src) {

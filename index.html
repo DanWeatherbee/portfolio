@@ -12,14 +12,11 @@
     <script>
         var timerStart = Date.now();
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y&v=3&callback=googleSuccess" + onerror="googleFail()">
-    </script>
 </head>
 <body class="center-block img-responsive">
     <div class="landing cubic-bezier center-block">
-        <h3 id="test-suite">Error</h3>
     </div>
-    <div class="container center-block img-responsive" id="main">
+    <div class="container cubic-bezier center-block img-responsive" id="main">
         <div class="row center-content clear-fix text-center" id="header">
             <ul id="top-contacts" class="flex-box"></ul>
         </div>
@@ -34,19 +31,19 @@
         </div>
         <div id="work-experience" class="row gray cubic-bezier tranparent-on">
             <h2 id="work-header" class="red-headers">Work Experience</h2>
-            <span><em>Click Header to Toggle View</em></span>
+            <span class="span-toggle"><em>Click or Tap Header to Toggle View</em></span>
         </div>
         <div id="projects" class="row cubic-bezier">
             <h2 id="projects-header" class="red-headers">Projects</h2>
-            <span><em>Click Header to Toggle View</em></span>
+            <span class="span-toggle"><em>Click or Tap Header to Toggle View</em></span>
         </div>
         <div id="education" class="row gray cubic-bezier tranparent-on">
             <h2 id="education-header" class="red-headers">Education</h2>
-            <span><em>Click Header to Toggle View</em></span>
+            <span class="span-toggle"><em>Click or Tap Header to Toggle View</em></span>
         </div>
         <div id="map-container" class="row cubic-bezier">
             <h2 id="live-work-header" class="red-headers">Where I've Lived and Worked</h2>
-            <span><em>Click Header to Toggle View</em></span>
+            <span class="span-toggle"><em>Click or Tap Header to Toggle View</em></span>
             <div id="map"></div>
             <div id="pano"></div>
         </div>
@@ -60,12 +57,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!--   Java Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/declarations.js"></script>
-    <script src="js/classes.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/google.js"></script>
-    <script src="js/app.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y&v=3&callback=googleSuccess" + onerror="googleFail()">
+    </script>
+<!-- all.js reffers to classes, data, declarations, functions, google js. -->
+    <script src="dist/uglified/all.js"></script>
+    <script src="dist/uglified/app.js"></script>
     <!-- end of container -->
     <!--   Style Sheets -->
     <link rel="stylesheet" href="css/main.css">

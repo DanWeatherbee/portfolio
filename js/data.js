@@ -1,4 +1,4 @@
-"use strict";
+
 var bio = {
     "name": "Dan Weatherbee",
     "role": "Front End Web Developer",

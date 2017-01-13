@@ -1,18 +1,34 @@
-"use strict";
-// Eror handler in case api fails
+var googleMap = '<div id="map"></div>';
+var infoWindowString = "<div id='info' style='color: black;'><div style='color: black;'>" +
+    "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img src='images/small/ninja.png'></div>\n " +
+    "<div style='color: black;'>Front End Ninja</div>";
+var bounds;
+var marker;
+var request;
+var map;
+var service;
+var lat;
+var lon;
+var vernon;
+var panorama;
+var infoWindow;
+var locations;
+var mapOptions;
+var initializeMap;
+var locations = [];
+
 function googleFail() {
   $("#button-show-map").hide();
   console.log(ERROR);
   alert(ERROR);
 }
 
-// first step we call initializeMap after the API success
-// added a time out function to load api and then append element and show buttons
+
 function googleSuccess() {
     $("#map-container").hide();
-    // Timeout to allow for google api response to arrive.
+
     setTimeout(function(){
-        // Create elements and events after request has arrived.
+
 
         $("#map").append(googleMap);
         $("#button-show-map").fadeIn();
@@ -24,14 +40,14 @@ function googleSuccess() {
 
         $("#button-show-map").click(function() {
             $("#map-container").fadeIn();
-            initializeMap();
+                initializeMap();
             $("#button-show-map").fadeOut();
         });
           }, 3000);
 }
 
  initializeMap = function() {
-
+  $("#button-show-map").hide();
     mapOptions = {
         disableDefaultUI: true
     };
@@ -59,18 +75,17 @@ function googleSuccess() {
 
         locations.push(bio.contacts.location);
 
-        // iterates through school locations and appends each location to
-        // the locations array. Note that forEach is used for array iteration
-        // as described in the Udacity FEND Style Guide:
-        // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+        /*
+         iterates through school locations and appends each location to
+         the locations array.
+        */
         education.schools.forEach(function(school) {
             locations.push(school.location);
         });
 
-        // iterates through work locations and appends each location to
-        // the locations array. Note that forEach is used for array iteration
-        // as described in the Udacity FEND Style Guide:
-        // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+        /* iterates through work locations and appends each location to
+          the locations array.
+         */
         work.jobs.forEach(function(job) {
             locations.push(job.location);
         });
@@ -95,9 +110,11 @@ function googleSuccess() {
     about a single location.
     */
     function createMapMarker(placeData) {
-        // infoWindows are the little helper windows that open when you click
-        // or hover over a pin on a map. They usually contain more information
-        // about a location.
+        /*
+         infoWindows are the little helper windows that open when you click
+          or hover over a pin on a map. They usually contain more information
+          about a location.
+        */
         infoWindow = new google.maps.InfoWindow();
         // The next lines save location data from the search result object to local variables
         lat = placeData.geometry.location.lat(); // latitude from the place service
@@ -128,8 +145,10 @@ function googleSuccess() {
             marker.setAnimation(google.maps.Animation.BOUNCE);
         });
 
-        // this is where the pin actually gets added to the map.
-        // bounds.extend() takes in a map location object
+        /*
+         this is where the pin actually gets added to the map.
+         bounds.extend() takes in a map location object
+         */
         bounds.extend(new google.maps.LatLng(lat, lon));
         // fit the map to the new marker
         map.fitBounds(bounds);
@@ -153,9 +172,11 @@ function googleSuccess() {
     */
     function pinPoster(locations) {
 
-        // creates a Google place search service object. PlacesService does the work of
-        // actually searching for location data.
-        service = new google.maps.places.PlacesService(map);
+        /*
+         creates a Google place search service object. PlacesService does the work of
+         actually searching for location data.
+         */
+        var service = new google.maps.places.PlacesService(map);
 
         // Iterates through the array of locations, creates a search object for each location
         locations.forEach(function(place) {
@@ -164,8 +185,10 @@ function googleSuccess() {
                 query: place
             };
 
-            // Actually searches the Google Maps API for location data and runs the callback
-            // function with the search results after each search.
+            /*
+            Actually searches the Google Maps API for location data and runs the callback
+            function with the search results after each search.
+            */
             service.textSearch(request, callback);
         });
     }
@@ -176,18 +199,23 @@ function googleSuccess() {
     // locations is an array of location strings returned from locationFinder()
     locations = locationFinder();
 
-    // pinPoster(locations) creates pins on the map for each location in
-    // the locations array
+    /*
+     pinPoster(locations) creates pins on the map for each location in
+    the locations array
+    */
     pinPoster(locations);
 
 
 
-    // Vanilla JS way to listen for resizing of the window
-    // and adjust map bounds
+    /*
+    Vanilla JS way to listen for resizing of the window
+    and adjust map bounds
+    */
     window.addEventListener('resize', function(e) {
         //Make sure the map bounds get updated on page resize
         map.fitBounds(mapBounds);
     });
+    $("#button-show-map").show;
 }
 
 

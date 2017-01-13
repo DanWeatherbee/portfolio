@@ -1,19 +1,14 @@
 
-(function(){
-    "use strict";
-})();
 var app;
 
 init = function () {
-
+    "use strict"
     bio.display();
     education.display();
-    work.display();
     projects.display();
-
+    work.display();
 };
 
-test.hide();
 $(window).resize(function () {
     viewportWidth = $(window).width();
     viewportHeight = $(window).height();
@@ -79,7 +74,7 @@ init.toggle = function () {
         navElem.fadeIn();
         playSong.stop();
     });
-
 };
+
 init();
 init.toggle();

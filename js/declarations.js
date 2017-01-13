@@ -26,14 +26,12 @@ var HTMLworkEmployer = '<a href="#" id="a-link">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
-(function(){
-    "use strict";
-})();
+var HTMLworkDescription = '<p class="cubic-bezier"><br>%data%</p>';
+
 var HTMLprojectStart = '<div class="project-entry"></div><hr>';
 var HTMLprojectTitle = '<a href="#" id="a-link">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectDescription = '<p class="cubic-bezier"><br>%data%</p>';
 var HTMLprojectImage = '<img id="project-img" class="responsive-images" src="%data%" alt="project imgage">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -41,7 +39,7 @@ var HTMLschoolName = '%data%';
 var HTMLschoolDegree = ' -- %data%';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><p>Graduated: %data%</p></em>';
+var HTMLschoolMajor = '<em><p class="cubic-bezier">Graduated: %data%</p></em>';
 var HTMLschoolUrl = '<br><a href="#education" id="a-link"><em>Url: %data%</em></a><br><hr>';
 
 var HTMLonlineClasses = '<h3 class="red-headers">Online Classes</h3>';
@@ -51,10 +49,7 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="https://www.udacity.com" id="a-link">%data%</a><br><hr>';
 
 // Globals
-var googleMap = '<div id="map"></div>';
-var infoWindowString = "<div id='info' style='color: black;'><div style='color: black;'>" +
-    "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img src='images/small/ninja.png'></div>\n " +
-    "<div style='color: black;'>Front End Ninja</div>";
+
 var workExperienceElem = $('#work-experience');
 var projectsElem = $("#projects");
 var educationElem = $("#education");
@@ -114,21 +109,7 @@ var lenght_of_array;
 var i;
 var aboutMeElem;
 var navElem;
-var map;
-var locations;
-var mapOptions;
-var initializeMap;
-var locations = [];
-var vernon;
-var panorama;
-var infoWindow;
-var lat;
-var lon;
 var name;
-var bounds;
-var marker;
-var service;
-var request;
 var landingElem;
 var Sound;
 var playSong;
@@ -136,7 +117,12 @@ var DomControl;
 var contact;
 var footer;
 var header;
-var test;
 var landing;
 var $;
+
+
+
+
+
+
 
