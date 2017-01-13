@@ -16,16 +16,14 @@ bio.display = function () {
     // created a variable to save on repetition
     formattedArray = (formattedMobile + formattedEmail + formattedGithub +
         formattedlinkedin + formattedUdacity + formattedLocation);
-
+    // append the data
     contact.add(formattedArray);
-    footer.add(formattedArray);
 
     formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
     formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    // append the data
     header.add(formattedBiopic);
     header.add(formattedWelcomeMsg);
-
-    // create a div
     header.add(HTMLskillsStart);
 
     lenght_of_array = bio.skills.length;
