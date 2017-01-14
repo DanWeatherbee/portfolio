@@ -1,3 +1,4 @@
+/*TODO remove all shadow combine into one class.*/
 .container {
     background: url(images/large/cool_girl-HD-lg-1920x1080.jpg)fixed no-repeat center;
 }
@@ -312,7 +313,7 @@ span {
     color: black;
 }
 .cubic-bezier {
-    transition: 1s;
+    transition: .5s;
     transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(0, 1, 1, 0);
 }
@@ -402,10 +403,6 @@ span {
     .orange {
         background-color: black;
     }
-    #footer-contacts {
-        opacity: .9;
-        background-color: midnightblue;
-    }
     a,
     li {
         color: lawngreen;
@@ -426,18 +423,14 @@ span {
 /*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
 
 @media only screen and (min-width: 200px) and (max-width: 736px) {
-    #skills,
-    #fire,
-    #top-contacts,
-    .nav-buttons,
-    #skills-h3 {
-        display: none;
-    }
     body,
     .container {
         background-color: black;
     }
     button {
+        -webkit-box-shadow: -2px 20px 24px -9px red;
+        -moz-box-shadow: -2px 20px 24px -9px red;
+        box-shadow: -2px 20px 24px -9px red;
         opacity: 9;
     }
     #header {
@@ -460,12 +453,26 @@ span {
     }
     p,
     #copyright,
-    #footer-contacts,
     #top-contacts {
         font-size: 1.5em;
     }
+    .education-entry {
+        color: red;
+        background-color: midnightblue;
+    }
     a {
-        font-size: 1.4em;
+        padding: 1.5em;
+        border-color: lawngreen;
+        border: 2px solid;
+        color: lawngreen;
+        border-radius: 50%;
+    }
+    a:hover {
+        border-color: red;
+        border-radius: 10%;
+        transition: .5s;
+        transition-timing-function: ease-in-out;
+        transition-timing-function: cubic-bezier(0, 1, 1, 0);
     }
     h2,
     h3,
@@ -504,6 +511,7 @@ span {
     body {
         background: url()fixed no-repeat center;
         background-color: black;
+        padding-bottom: 1.5em;
     }
     .container:hover,
     body:hover {
@@ -514,8 +522,8 @@ span {
     span {
         color: black;
     }
-    a {
-        color: turquoise;
+    #skills-span {
+        display: none;
     }
 }
 }

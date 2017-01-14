@@ -52,6 +52,7 @@ gulp.task('images',  function (done) {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/css/images/large/'))
 });
-gulp.task('build', [`concat`, `concat-css`, `css-min`, `compress`, `compress-app`, 'images'], function (){
-
+gulp.task('build-1', [`concat`, `concat-css`, `css-min`, `compress`, `compress-app`, 'images'], function (){
+});
+gulp.task('build-2', [`concat`, `concat-css`, `css-min`, `compress`, `compress-app`, 'images'], function (){
 });
