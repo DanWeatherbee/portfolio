@@ -222,7 +222,6 @@ var workExperienceElem = $('#work-experience');
 var projectsElem = $("#projects");
 var educationElem = $("#education");
 var mapContainerElem = $("#map-container");
-var letsConnectElem =  $("#lets-connect");
 var bttnShowWorkElem = $("#button-show-work");
 var bttnShowProjectsElem = $("#button-show-projects");
 var bttnShowEducationElem = $("#button-show-education");
