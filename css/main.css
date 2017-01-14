@@ -38,10 +38,6 @@ body {
     width: 100%;
     z-index: 1;
 }
-#lets-connect:hover {
-    opacity: 1;
-    background-color: black;
-}
 #skills-span {
     color: red;
     background-color: black;
@@ -293,10 +289,6 @@ img {
 span {
     padding: 5px;
 }
-#lets-connect {
-    text-align: center;
-    opacity: .8;
-}
 #row-clear {
     clear: both;
 }
@@ -455,10 +447,7 @@ span {
     p:hover {
         font-size: 130%;
     }
-    #lets-connect {
-        margin-top: 10%;
-        opacity: .9;
-    }
+
     .welcome-message {
         display: none;
     }
@@ -504,9 +493,6 @@ span {
     }
     h4 {
         font-size: 1em;
-    }
-    #lets-connect {
-        background-color: darkred;
     }
     .orange {
         background-color: black;
