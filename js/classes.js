@@ -5,7 +5,7 @@ Sound = function (src) {
     this.sound.src = src;
     this.sound.setAttribute("preload", "auto");
     this.sound.setAttribute("controls", "none");
-    $("#header").append(this.sound);
+    $("#player-ctrl").append(this.sound);
     this.play = function () {
         this.sound.play();
     };

@@ -1,4 +1,14 @@
-/*TODO remove all shadow combine into one class.*/
+.gradient,
+.orange-text,
+a:hover {
+    background: url()fixed no-repeat center;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+20,2989d8+50,1e5799+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100;Blue+Two+Sided+Transparent */
+    background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(30,87,153,0.8) 15%, rgba(30,87,153,1) 19%, rgba(30,87,153,1) 20%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 80%, rgba(30,87,153,1) 81%, rgba(30,87,153,0.8) 85%, rgba(30,87,153,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
+    padding-bottom: 1.5em;
+}
 .container {
     background: url(images/large/cool_girl-HD-lg-1920x1080.jpg)fixed no-repeat center;
 }
@@ -11,15 +21,30 @@ body {
 .container {
     min-height: 900px;
 }
+#player-ctrl {
+    padding-top: 5%;
+}
 .me-pic {
     height: 200px;
     width: 200px;
 }
-.landing {
-    width: 100%;
-    height: 100%;
+a,
+#projects:hover,
+#education:hover,
+#work-experience:hover,
+#a-link:hover,
+#biopic-col,
+.landing,
+#skills-span,
+.welcome-message {
     background-color: black;
+}
+.landing,
+li,
+a {
     color: lawngreen;
+}
+.landing {
     position: fixed;
     z-index: 1;
 }
@@ -44,27 +69,15 @@ body {
 }
 #skills-span {
     color: red;
-    background-color: black;
     font-size: 150%;
     opacity: .7;
-    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
-    -moz-box-shadow: -2px 20px 24px -9px turquoise;
-    box-shadow: -2px 20px 24px -9px turquoise;
 }
 #skills {
     letter-spacing: 1em;
 }
-.welcome-message {
-    background-color: black;
-    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
-    -moz-box-shadow: -2px 20px 24px -9px turquoise;
-    box-shadow: -2px 20px 24px -9px turquoise;
-}
-.responsive-images {
-    height: 100%;
-    width: 100%;
-}
-img {
+.responsive-images,
+img,
+.landing {
     height: 100%;
     width: 100%;
 }
@@ -72,19 +85,16 @@ img {
     letter-spacing: .8em;
 }
 #biopic-col {
-    height: 100px;
-    width: 100px;
     border-radius: 100%;
-    background-color: black;
     opacity: .7;
 }
 .biopic {
-    height: 100px;
-    width: 100px;
     background: transparent;
 }
-li {
-    color: lawngreen;
+#biopic-col,
+.biopic {
+    height: 100px;
+    width: 100px;
 }
 body,
 ul,
@@ -117,19 +127,11 @@ h6,
 #projects,
 #education,
 #work-experience,
-#live-work-header {
+#live-work-header,
+button:hover,
+.red-headers:hover {
     color: turquoise;
     font-family: "lato", sans-serif;
-    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
-    -moz-box-shadow: -2px 20px 24px -9px turquoise;
-    box-shadow: -2px 20px 24px -9px turquoise;
-}
-#developer {
-    color: lawngreen;
-}
-#a-link:hover {
-    background-color: black;
-    color: lawngreen;
     -webkit-box-shadow: -2px 20px 24px -9px turquoise;
     -moz-box-shadow: -2px 20px 24px -9px turquoise;
     box-shadow: -2px 20px 24px -9px turquoise;
@@ -138,22 +140,6 @@ h6,
     color: black;
     font-size: 1em;
     font-weight: 900;
-}
-button {
-    background-color: turquoise;
-    padding: 5%;
-    opacity: .3;
-    border-radius: 100%;
-}
-button:hover {
-    font-size: 150%;
-    opacity: .9;
-    background-color: white;
-    -webkit-box-shadow: -2px 20px 24px -9px turquoise;
-    -moz-box-shadow: -2px 20px 24px -9px turquoise;
-    box-shadow: -2px 20px 24px -9px turquoise;
-    border: solid 10px;
-    border-color: red;
 }
 p:hover {
     font-size: 200%;
@@ -170,24 +156,16 @@ p:hover {
 .red-headers:hover {
     color: lightblue;
     background-color: darkgreen;
-    border-radius: 10px 200px 200px 10px;
-    -moz-border-radius: 10px 200px 200px 10px;
-    -webkit-border-radius: 10px 200px 200px 10px;
     border: solid 2px;
     border-color: red;
 }
 #projects,
 #education,
 #work-experience,
-#nav,
 #button-show-map {
     display: none;
 }
-#projects:hover,
-#education:hover,
-#work-experience:hover {
-    background-color: black;
-}
+
 .education-entry,
 .work-entry,
 .project-entry {
@@ -241,6 +219,7 @@ a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
+    padding: 5%;
 }
 .welcome-message {
     font-style: italic;
@@ -251,9 +230,6 @@ a {
 #skills-h3 {
     display: none;
     background-color: black;
-}
-.orange {
-    background-color: #f5ae23;
 }
 .orange-text {
     color: #f5ae23;
@@ -337,10 +313,18 @@ span {
     font-size: 1em;
     font-weight: 900;
 }
+
+.nav-buttons {
+    font-size: 3.5;
+    color: yellow;
+    padding: 5%;
+}
 /* Media queries to handle various device widths */
 
 @media only screen and (min-width: 1200px) {
-
+    #player-ctrl {
+        padding-top: 10%;
+    }
     #about-me {
         font-size: 2em;
         height: 98%;
@@ -361,6 +345,13 @@ span {
     font-weight: 900;
     background-color: turquoise;
     border-radius: 10%;
+    }
+    .landing,
+    li,
+    #developer,
+    #a-link:hover,
+    a {
+        color: lawngreen;
     }
 }
 /*Labtop Ipad*/
@@ -400,14 +391,6 @@ span {
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
     }
-    .orange {
-        background-color: black;
-    }
-    a,
-    li {
-        color: lawngreen;
-    }
-
     .span-toggle {
     font-size: 1em;
     font-weight: 900;
@@ -419,14 +402,14 @@ span {
         background: url()fixed no-repeat center;
         background-color: black;
     }
+    #a-link:hover,
+    a {
+        color: lawngreen;
+    }
 }
 /*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
 
 @media only screen and (min-width: 200px) and (max-width: 736px) {
-    body,
-    .container {
-        background-color: black;
-    }
     button {
         -webkit-box-shadow: -2px 20px 24px -9px red;
         -moz-box-shadow: -2px 20px 24px -9px red;
@@ -435,7 +418,6 @@ span {
     }
     #header {
         font-size: 70%;
-        background-color: black;
     }
     #name {
         font-size: 180%;
@@ -460,11 +442,15 @@ span {
         color: red;
         background-color: midnightblue;
     }
+    a,
+    #developer,
+    a:hover {
+        color: lawngreen;
+    }
     a {
         padding: 1.5em;
         border-color: lawngreen;
         border: 2px solid;
-        color: lawngreen;
         border-radius: 50%;
     }
     a:hover {
@@ -504,23 +490,20 @@ span {
     h4 {
         font-size: 1em;
     }
-    .orange {
-        background-color: black;
-    }
     .container,
     body {
         background: url()fixed no-repeat center;
-        background-color: black;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+20,2989d8+50,1e5799+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100;Blue+Two+Sided+Transparent */
+background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(30,87,153,0.8) 15%, rgba(30,87,153,1) 19%, rgba(30,87,153,1) 20%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 80%, rgba(30,87,153,1) 81%, rgba(30,87,153,0.8) 85%, rgba(30,87,153,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
         padding-bottom: 1.5em;
-    }
-    .container:hover,
-    body:hover {
-        background: url()fixed no-repeat center;
-        background-color: black;
     }
     h2,
     span {
-        color: black;
+        color: red;
+        background-color: black;
     }
     #skills-span {
         display: none;

@@ -5,7 +5,7 @@ Sound = function (src) {
     this.sound.src = src;
     this.sound.setAttribute("preload", "auto");
     this.sound.setAttribute("controls", "none");
-    $("#header").append(this.sound);
+    $("#player-ctrl").append(this.sound);
     this.play = function () {
         this.sound.play();
     };
@@ -174,14 +174,14 @@ var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
 var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
 '<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">contact</span><span>%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">Mobile</span><span>%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">Email</span><span>%data%</span></li>';
-var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">Linkedin</span><span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">Github</span><span>%data%</span></li>';
-var HTMLudacity = '<li class="flex-item"><span class="orange-text">Udacity</span><span>%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">Blog</span><span>%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">Location</span><span>%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class=>contact</span><span>%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span>Mobile</span><span>%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span>Email</span><span>%data%</span></li>';
+var HTMLlinkedin = '<li class="flex-item"><span>Linkedin</span><span>%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span>Github</span><span>%data%</span></li>';
+var HTMLudacity = '<li class="flex-item"><span>Udacity</span><span>%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span>Blog</span><span>%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span>Location</span><span>%data%</span></li>';
 
 var HTMLbioPic = '<div id="biopic-col" class="col-md-1"><img src="%data%" class="biopic"></div>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
