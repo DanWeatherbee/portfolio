@@ -22,9 +22,10 @@ $(window).resize(function () {
 
 init.toggle = function () {
 
+    showNavElem = $("#show-nav-button");
     aboutMeElem = $("#about-me");
     landingElem = $(".landing");
-    navElem = $("#nav");
+    navElem = $(".nav");
     // Show hide flip toggle method for nav elements.
     projectsHeaderElem.click(function () {
         bttnShowProjectsElem.fadeIn();
@@ -64,15 +65,21 @@ init.toggle = function () {
         educationElem.fadeIn();
         bttnShowEducationElem.fadeOut();
     });
-
+    navElem.fadeOut();
     landingElem.click(function () {
         landingElem.addClass("flip");
         setTimeout(function () {
             landingElem.removeClass("flip");
             landingElem.hide();
         }, 1000);
-        navElem.fadeIn();
         playSong.stop();
+    });
+    showNavElem.mouseover(function () {
+        showNavElem.html("Menu");
+    });
+    showNavElem.click(function () {
+        showNavElem.fadeOut();
+        navElem.fadeIn();
     });
 };
 
