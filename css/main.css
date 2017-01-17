@@ -28,6 +28,7 @@ body {
     width: 200px;
 }
 a,
+#developer,
 #show-nav-button:hover,
 #top-contacts,
 #projects:hover,
@@ -37,17 +38,21 @@ a,
 #biopic-col,
 .landing,
 #skills-span,
+#skills-h3,
 .welcome-message {
     background-color: black;
+}
+#about-me {
+    font-size: 1.7em;
+}
+p {
+    font-size: 2em;
+    line-height: 1.5em;
 }
 .landing,
 li,
 a {
     color: lawngreen;
-}
-.landing {
-    position: fixed;
-    z-index: 1;
 }
 #test-suite {
     background-color: blue;
@@ -82,6 +87,11 @@ img,
     height: 100%;
     width: 100%;
 }
+.landing {
+    position: absolute;
+    z-index: 1;
+    padding: 5% 10% 10% 10%;
+}
 .letter-spacer {
     letter-spacing: .8em;
 }
@@ -100,7 +110,6 @@ img,
 body,
 ul,
 li,
-p,
 h1,
 h2,
 h3,
@@ -163,11 +172,6 @@ button:hover,
     color: black;
     font-size: 1em;
     font-weight: 900;
-}
-p:hover {
-    font-size: 200%;
-    line-height: 1.5em;
-    padding: 2%;
 }
 .red-headers {
     color: red;
@@ -233,10 +237,6 @@ h5 {
 .location-text {
     float: right;
 }
-p {
-    font-size: 14px;
-    line-height: 21px;
-}
 a {
     padding: 1.5em;
     border-color: lawngreen;
@@ -268,7 +268,6 @@ a:hover,
 }
 #skills-h3 {
     display: none;
-    background-color: black;
 }
 .orange-text {
     color: #f5ae23;
@@ -335,9 +334,6 @@ span {
 .tranparent-on {
     background-color: transparent;
 }
-#about-me {
-    padding: 2%;
-}
 .flip {
     -webkit-transform-origin: 50% 0%;
     -o-transform-origin: 50% 0%;
@@ -361,7 +357,6 @@ span {
     }
     #about-me {
         font-size: 2em;
-        height: 98%;
     }
     .me-pic {
         height: 280px;
@@ -398,17 +393,14 @@ span {
         opacity: 1;
     }
     .container,
-    body {
+    .container:hover,
+    body,
+    body:hover {
         background: url()fixed no-repeat center;
         background-color: black;
     }
     .container  {
         padding-top: 15%;
-    }
-    #about-me {
-        font-size: 1.7em;
-        border: 0px;
-        text-align: center;
     }
     #about-me,
     h2,
@@ -434,11 +426,6 @@ span {
     background-color: turquoise;
     border-radius: 10%;
     }
-    .container:hover,
-    body:hover {
-        background: url()fixed no-repeat center;
-        background-color: black;
-    }
     #a-link:hover,
     a {
         color: lawngreen;
@@ -447,6 +434,13 @@ span {
 /*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
 
 @media only screen and (min-width: 200px) and (max-width: 736px) {
+    .landing {
+        height: 100%;
+    }
+    p {
+    font-size: 1em;
+    line-height: 1.5em;
+    }
     button {
         -webkit-box-shadow: -2px 20px 24px -9px red;
         -moz-box-shadow: -2px 20px 24px -9px red;
@@ -459,10 +453,6 @@ span {
     #name {
         font-size: 180%;
     }
-    p:hover {
-        font-size: 130%;
-    }
-
     .welcome-message {
         display: none;
     }
@@ -470,7 +460,6 @@ span {
         max-width: 285px;
         max-height: 285px;
     }
-    p,
     #copyright,
     #top-contacts {
         font-size: 1.5em;
@@ -499,11 +488,6 @@ span {
     }
     #about-me {
         font-size: 1em;
-        border-radius: 0px;
-        -moz-border-radius: 0px;
-        -webkit-border-radius: 0px;
-        border: 0px solid #52aeff;
-        text-align: center;
     }
     .me-pic {
         height: 22%;

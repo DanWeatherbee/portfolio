@@ -14,8 +14,7 @@
     </script>
 </head>
 <body class="center-block img-responsive">
-    <div class="landing cubic-bezier center-block">
-    </div>
+    <div class="landing cubic-bezier center-block"></div>
     <div class="container cubic-bezier center-block img-responsive" id="main">
         <div class="row center-content clear-fix text-center" id="header">
             <ul id="top-contacts" class="flex-box"></ul>
@@ -65,10 +64,12 @@
     <!-- Window load timer end. -->
     <script>
         $(document).ready(function() {
-            $('#about-me').append('<h4>' + "Time until DOMready: ", Date.now() - timerStart + '</h4>');
+            $('#about-me').append('<h4>' + "Time until DOMready: ", Date.now() - timerStart +
+             ' milliseconds - seconds: </h4>' + ' ' + (Date.now() - timerStart)/1000);
         });
         $(window).load(function() {
-            $('#about-me').append('<h4>' + "Time until everything loaded: ", Date.now() - timerStart + '</h4>');
+            $('#about-me').append('<h4>' + "Time until everything loaded: ", Date.now() - timerStart +
+             ' milliseconds - seconds: </h4>' + ' ' + (Date.now() - timerStart)/1000);
         });
         playSong.play();
     </script>

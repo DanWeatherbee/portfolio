@@ -9,17 +9,6 @@ init = function () {
     work.display();
 };
 
-$(window).resize(function () {
-    viewportWidth = $(window).width();
-    viewportHeight = $(window).height();
-    if (viewportWidth < 1200) {
-        playSong.stop();
-    }
-    if (viewportWidth > 1200) {
-        playSong.play();
-    }
-});
-
 init.toggle = function () {
 
     showNavElem = $("#show-nav-button");
