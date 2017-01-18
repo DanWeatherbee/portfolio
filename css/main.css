@@ -1,3 +1,25 @@
+.slide-animation {
+    -webkit-animation: myfirst 5s infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation: myfirst 5s infinite;
+    animation-direction: alternate;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myfirst {
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+}
+
+@keyframes myfirst {
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+}
 .gradient,
 .orange-text {
     background: url()fixed no-repeat center;
@@ -44,6 +66,7 @@ a,
 }
 #developer {
     color: lawngreen;
+    border-radius: 100%;
 }
 #about-me {
     font-size: 1.7em;
@@ -179,9 +202,9 @@ button:hover,
 .red-headers {
     color: red;
 }
-#fire {
-    height: 200px;
-    width: 200px;
+.img-circle {
+    height: 100px;
+    width: 100px;
 }
 .red-headers:hover {
     color: lightblue;
@@ -351,6 +374,10 @@ span {
     font-size: 1em;
     font-weight: 900;
 }
+#a-link {
+    border: 2px solid;
+    border-color: turquoise;
+}
 
 /* Media queries to handle various device widths */
 
@@ -389,9 +416,6 @@ span {
 
 @media only screen and (max-width: 1200px) {
     #biopic-col {
-        display: none;
-    }
-    #fire {
         display: none;
     }
     button {
@@ -437,7 +461,7 @@ span {
     }
 }
 /*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 365px) {
     .me-pic {
         display: none;
     }

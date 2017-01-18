@@ -2,7 +2,7 @@
 
 // HTML containers
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
-var HTMLheaderRole = '<p id="developer">%data%</p><hr>';
+var HTMLheaderRole = '<p id="developer" class="slide-animation">%data%</p><hr>';
 var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
 '<img class="img-circle img-responsive me-pic" src="images/small/me.jpg"></div>';
 
