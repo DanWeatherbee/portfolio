@@ -85,7 +85,7 @@ education.display = function () {
 };
 
 
-work.display = function() {
+work.display = function () {
     work.jobs.forEach(function (job) {
 
         // create div

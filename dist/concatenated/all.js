@@ -228,6 +228,8 @@ var bttnShowEducationElem = $("#button-show-education");
 var projectsHeaderElem = $("#projects-header");
 var workHeaderElem = $("#work-header");
 var educationHeaderElem = $("#education-header");
+var buttonShowMapElem = $("#button-show-map");
+var showNavButton = $("#show-nav-button");
 var ERROR = "!Oop's ... it seams googles api is unavailable. Suggestion: check your connection";
 
 // Mutables
@@ -286,6 +288,7 @@ var footer;
 var header;
 var landing;
 var $;
+var toggleVisability;
 
 
 
@@ -381,7 +384,7 @@ education.display = function () {
 };
 
 
-work.display = function() {
+work.display = function () {
     work.jobs.forEach(function (job) {
 
         // create div

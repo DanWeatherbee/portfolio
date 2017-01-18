@@ -3,6 +3,7 @@ var app;
 
 init = function () {
     "use strict"
+    $(".container").hide();
     bio.display();
     education.display();
     projects.display();
@@ -62,6 +63,7 @@ init.toggle = function () {
             landingElem.hide();
         }, 1000);
         playSong.stop();
+        $(".container").fadeIn();
     });
     showNavElem.mouseover(function () {
         showNavElem.html("Menu");
