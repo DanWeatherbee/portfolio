@@ -51,7 +51,7 @@ gulp.task('css-min', function (done) {
 gulp.task('images-css',  function (done) {
     gulp.src('css/images/large/*.*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/css/images/large/'))
+        .pipe(gulp.dest('dist/cssmin/images/large/'))
 });
 gulp.task('images-main-medium',  function (done) {
     gulp.src('images/medium/*.*')
@@ -74,7 +74,7 @@ gulp.task('gzip-main-small', function() {
  .pipe(gulp.dest('dist/images/small/'));
 });
 gulp.task('gzip-images-css', function() {
- gulp.src('dist/css/images/large/*.*')
+ gulp.src('dist/cssmin/images/large/*.*')
  .pipe(gzip())
  .pipe(gulp.dest('dist/cssmin/images/large/'));
 });
