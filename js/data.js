@@ -26,7 +26,7 @@ var bio = {
         "Bootstrap",
         "Gulp",
         "Git hub"],
-    "biopic": "dist/images/small/ninja.png.gz"
+    "biopic": "dist/images/small/ninja.png"
 };
 
 var education = {
@@ -94,7 +94,7 @@ var projects = {
         "description": "app-p6 FEND Wrote comprehensive unit tests, using" +
         " the Jasmine testing framework, for an RSS Feed Reader application that" +
         " uses Google's RSS API.",
-        "images": ["dist/images/medium/app-6.png.gz", "dist/images/medium/app-6-code.png.gz"]
+        "images": ["dist/images/medium/app-6.png", "dist/images/medium/app-6-code.png"]
     }, {
         "title": "<a href='https://danweatherbee.github.io/app-p5/' id='a-link'>" +
             "Neighborhood Map P5 FEND</a>",
@@ -104,7 +104,7 @@ var projects = {
         "various points of interest. Users can search all included landmarks and, when" +
         " selected, additional information about a landmark is presented from the" +
         " FourSquare and Flickr APIs.",
-        "images": ["dist/images/medium/app-5-gif.gif.gz", "dist/images/medium/app-5.png.gz"]
+        "images": ["dist/images/medium/app-5-gif.gif", "dist/images/medium/app-5.png"]
     },
     {
         "title": "<a href='https://danweatherbee.github.io/app-p4/' id='a-link'>" +
@@ -113,7 +113,7 @@ var projects = {
         "description": "app-p4 FEND Optimized an inefficient web application's JavaScript," +
         " CSS and assets delivery, ensuring it runs at 60 fps and achieves a PageSpeed" +
         " score of at least 95.",
-        "images": ["dist/images/medium/web-performance.png.gz", "dist/images/medium/web-performance-2.png.gz"]
+        "images": ["dist/images/medium/web-performance.png", "dist/images/medium/web-performance-2.png"]
     },
     {
         "title": "<a href='https://danweatherbee.github.io/app-p3/' id='a-link'>" +
@@ -121,6 +121,6 @@ var projects = {
         "dates": "2016",
         "description": "app-p3 FEND An HTML5 Canvas powered video game," +
         " developed using the best practices in Object Oriented JavaScript.",
-        "images": ["dist/images/medium/arcade.png.gz", "dist/images/medium/arcade-2.png.gz"]
+        "images": ["dist/images/medium/arcade.png", "dist/images/medium/arcade-2.png"]
     }]
 };
