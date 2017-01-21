@@ -1,4 +1,69 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" content="Dans app"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#db5945"><meta name="msapplication-square310x310logo" content="favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dan Weatherbee's Portfolio</title><!-- Date stamp to time dom loading. --><script>var timerStart = Date.now();</script></head><body class="center-block img-responsive"><div class="landing cubic-bezier center-block"></div><div class="container cubic-bezier center-block img-responsive" id="main"><div class="row center-block clear-fix text-center" id="header"><ul id="top-contacts" class="flex-box"></ul></div><div id="row-clear" class="row"></div><div id="show-nav-button" class="center-block text-center"></div><div class="nav text-center"><button id="button-show-work" class="nav-buttons btn-lg btn-outline-primary gradient">Work</button> <button id="button-show-projects" class="nav-buttons btn-lg btn-outline-primary gradient">Projects</button> <button id="button-show-education" class="nav-buttons btn-lg btn-outline-primary gradient">Education</button> <button id="button-show-map" class="nav-buttons btn-lg btn-outline-primary gradient">Map</button></div><div id="player-ctrl" class="center-block text-center"></div><div id="work-experience" class="row gray cubic-bezier tranparent-on"><h2 id="work-header" class="red-headers gradient">Work Experience</h2><button class="span-toggle cubic-bezier gradient btn btn-secondary btn-lg btn-block"><em>Click or Tap Header to Toggle View</em></button></div><div id="projects" class="row cubic-bezier"><h2 id="projects-header" class="red-headers gradient">Projects</h2><button class="span-toggle cubic-bezier gradient btn btn-secondary btn-lg btn-block"><em>Click or Tap Header to Toggle View</em></button></div><div id="education" class="row gray cubic-bezier tranparent-on"><h2 id="education-header" class="red-headers gradient">Education</h2><button class="span-toggle cubic-bezier gradient btn btn-secondary btn-lg btn-block"><em>Click or Tap Header to Toggle View</em></button></div><div id="map-container" class="row cubic-bezier"><h2 id="live-work-header" class="red-headers gradient">Where I've Lived and Worked</h2><button class="span-toggle cubic-bezier gradient btn btn-secondary btn-lg btn-block"><em>Click or Tap Header to Toggle View</em><div id="map">Error: Google's Api Service, F5 or refresh to fix.</div><div id="pano"></div></button></div></div><!--            bootstrap framework --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><!--   Java Script --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script async defer="defer" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y&v=3&callback=googleSuccess" + onerror="googleFail()"></script><!-- all.js reffers to classes, data, declarations, functions, google js. --><script async src="dist/uglified/all.js"></script><script async src="dist/uglified/app.js"></script><!-- end of container --><!--   Style Sheets --><link rel="stylesheet" href="dist/cssmin/allcss.min.css"><!-- Window load timer end. --><script>$(document).ready(function() {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8 /" content="Dans app"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="robots" content="index, follow"><meta http-equiv="Cache-control" content="description"><meta http-equiv="Set-Cookie" content="name, date"><meta name="description" content="Dan Weatherbee's Portfolio"><meta name="web_author" content="Dan Weatherbee Web Developer"><meta name="keywords" content="web developement,front end developement,front end web developement,danweatherbee,dan weatherbee"><meta name="author" content="Dan Weatherbee"><meta name="copyright" content="Dan Weatherbee"><meta name="contact" content="dan@jedi-clan.us"><meta name="reply-to" content="dan@jedi-clan.us"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#db5945"><meta name="msapplication-square310x310logo" content="favicon.ico"><title>Dan Weatherbee's Portfolio</title><!-- Date stamp to time dom loading. --><script>var timerStart = Date.now();</script><!-- Critical css for load --><style>@media only screen and (min-width: 1200px) {
+            #about-me {
+                font-size: 2em;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            #about-me {
+                -webkit-box-shadow: -2px 2px 2px -9px turquoise;
+                -moz-box-shadow: -2px 2px 2px -9px turquoise;
+                box-shadow: -2px 2px 2px -9px turquoise;
+            }
+            .landing {
+                color: lawngreen;
+            }
+        }
+        @media only screen and (min-width: 200px) and (max-width: 736px) {
+            #about-me {
+            font-size: 1em;
+            height: 50%;
+        }
+             }
+        }
+        /*End of media queries*/
+        .landing {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            padding: 5% 10% 10% 10%;
+        }
+        #show-nav-button {
+            border-radius: 100%;
+            padding: 1em;
+            height: 100px;
+            width: 100px;
+            font-size: 2.5;
+            color: red;
+            border: 2px solid;
+            background: url("images/large/wallpapers-HD-lg-2560x1600.jpg")center;
+             -webkit-box-shadow: -2px 20px 24px -9px turquoise;
+            -moz-box-shadow: -2px 20px 24px -9px turquoise;
+            box-shadow: -2px 20px 24px -9px turquoise;
+        }
+        #show-nav-button:hover {
+            border-radius: 70%;
+            padding: 1em;
+            border: 5px solid;
+            border-color: red;
+            color: lawngreen;
+            background: url();
+        }
+        html,
+        body,
+        #about-me,
+        #show-nav-button:hover,
+        .landing {
+            background-color: black;
+        }
+        .landing,
+        #about-me {
+        color: lawngreen;
+        }
+        #about-me {
+            font-size: 1.7em;
+            padding: 10%;
+        }</style></head><body class="center-block img-responsive"><article class="landing cubic-bezier center-block"></article><main class="container cubic-bezier center-block img-responsive" id="main"><header class="row center-block clear-fix text-center" id="header"><ul id="top-contacts" class="flex-box"></ul></header><section id="row-clear" class="row"></section><button id="show-nav-button" class="center-block text-center"></button><nav class="nav text-center"><button id="button-show-work" class="nav-buttons btn-lg btn-outline-primary gradient">Work</button> <button id="button-show-projects" class="nav-buttons btn-lg btn-outline-primary gradient">Projects</button> <button id="button-show-education" class="nav-buttons btn-lg btn-outline-primary gradient">Education</button> <button id="button-show-map" class="nav-buttons btn-lg btn-outline-primary gradient">Map</button></nav><audio id="player-ctrl" class="center-block text-center"></audio><section id="work-experience" class="row gray cubic-bezier tranparent-on"><h2 id="work-header" class="red-headers gradient">Work Experience <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h2></section><section id="projects" class="row cubic-bezier"><h2 id="projects-header" class="red-headers gradient">Projects <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h2></section><section id="education" class="row gray cubic-bezier tranparent-on"><h2 id="education-header" class="red-headers gradient">Education <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h2></section><section id="map-container" class="row cubic-bezier"><h2 id="live-work-header" class="red-headers gradient">Where I've Lived and Worked <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h2><section id="map">Error: Google's Api Service, F5 or refresh to fix.</section><section id="pano"></section></section></main><!--            bootstrap framework --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><!--   Java Script --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script async defer="defer" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQa7sEzryM_PhL4HPU2Z7DjTGrRRcWu1Y&v=3&callback=googleSuccess" + onerror="googleFail()"></script><!-- all.js reffers to classes, data, declarations, functions, google js. --><script async src="dist/uglified/all.js"></script><script async src="dist/uglified/app.js"></script><!-- end of container --><!--   Style Sheets --><link rel="stylesheet" href="dist/cssmin/allcss.min.css"><!-- Window load timer end. --><script>$(document).ready(function() {
             $('#about-me').append('<h4>' + "Time until DOMready: ", Date.now() - timerStart +
              ' milliseconds - seconds: </h4>' + ' ' + (Date.now() - timerStart)/1000);
         });

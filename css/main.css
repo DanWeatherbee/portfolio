@@ -53,14 +53,12 @@ body,
 .container,
 a,
 #developer,
-#show-nav-button:hover,
 #top-contacts,
 #projects:hover,
 #education:hover,
 #work-experience:hover,
 #a-link:hover,
 #biopic-col,
-.landing,
 #skills-span,
 #skills-h3,
 .welcome-message {
@@ -70,14 +68,10 @@ a,
     color: lawngreen;
     border-radius: 100%;
 }
-#about-me {
-    font-size: 1.7em;
-}
 p {
     font-size: 2em;
     line-height: 1.5em;
 }
-.landing,
 li,
 a {
     color: lawngreen;
@@ -109,16 +103,9 @@ a {
 #skills {
     letter-spacing: 1em;
 }
-.responsive-images,
-img,
-.landing {
+img {
     height: 100%;
     width: 100%;
-}
-.landing {
-    position: absolute;
-    z-index: 1;
-    padding: 5% 10% 10% 10%;
 }
 .letter-spacer {
     letter-spacing: .8em;
@@ -173,33 +160,6 @@ button:hover,
     -webkit-box-shadow: -2px 20px 24px -9px turquoise;
     -moz-box-shadow: -2px 20px 24px -9px turquoise;
     box-shadow: -2px 20px 24px -9px turquoise;
-}
-#show-nav-button {
-    border-radius: 100%;
-    padding: 1em;
-    height: 100px;
-    width: 100px;
-    font-size: 2.5;
-    color: red;
-    border: 2px solid;
-    background: url("images/large/wallpapers-HD-lg-2560x1600.jpg")center;
-     -webkit-box-shadow: -2px 20px 24px -9px turquoise;
-    -moz-box-shadow: -2px 20px 24px -9px turquoise;
-    box-shadow: -2px 20px 24px -9px turquoise;
-}
-#show-nav-button:hover {
-    border-radius: 70%;
-    padding: 1em;
-    border: 5px solid;
-    border-color: red;
-    color: lawngreen;
-    background: url();
-    background-color: black;
-}
-.span-toggle {
-    color: black;
-    font-size: 1em;
-    font-weight: 900;
 }
 .red-headers {
     color: red;
@@ -372,10 +332,6 @@ span {
     border: solid 10px;
     border-color: red;
 }
-.span-toggle {
-    font-size: 1em;
-    font-weight: 900;
-}
 #a-link {
     border: 2px solid;
     border-color: turquoise;
@@ -386,9 +342,6 @@ span {
 @media only screen and (min-width: 1200px) {
     #player-ctrl {
         padding-top: 10%;
-    }
-    #about-me {
-        font-size: 2em;
     }
     .me-pic {
         height: 280px;
@@ -401,13 +354,6 @@ span {
         box-shadow: -2px 20px 24px -9px turquoise;
 
     }
-    .span-toggle {
-    font-size: 1em;
-    font-weight: 900;
-    background-color: turquoise;
-    border-radius: 10%;
-    }
-    .landing,
     li,
     #a-link:hover,
     a {
@@ -433,7 +379,6 @@ span {
     .container  {
         padding-top: 15%;
     }
-    #about-me,
     h2,
     h3,
     h4 {
@@ -450,12 +395,6 @@ span {
         -webkit-box-shadow: -2px 20px 24px -9px turquoise;
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
-    }
-    .span-toggle {
-    font-size: 1em;
-    font-weight: 900;
-    background-color: turquoise;
-    border-radius: 10%;
     }
     #a-link:hover,
     a {
@@ -480,9 +419,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', e
 }
 
 @media only screen and (min-width: 200px) and (max-width: 736px) {
-    #about-me {
-        height: 50%;
-    }
+
     p {
     font-size: 1em;
     line-height: 1.5em;
@@ -531,9 +468,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', e
     button {
         background-color: turquoise;
         padding: .5em;
-    }
-    #about-me {
-        font-size: 1em;
     }
     .me-pic {
         height: 22%;

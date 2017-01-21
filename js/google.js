@@ -1,6 +1,6 @@
 var googleMap = '<div id="map"></div>';
 var infoWindowString = "<div id='info' style='color: black;'><div style='color: black;'>" +
-    "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img src='images/small/ninja.png'></div>\n " +
+    "<em>Dan Weatherbee.</em></div></div><div style='color: black;'><img alt='Ninja image' srcset='images/small/ninja.png'></div>\n " +
     "<div style='color: black;'>Front End Ninja</div>";
 var bounds;
 var marker;

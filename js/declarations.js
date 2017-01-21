@@ -4,7 +4,7 @@
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
 var HTMLheaderRole = '<p id="developer" class="slide-animation">%data%</p><hr>';
 var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
-'<img class="img-circle img-responsive me-pic" src="dist/images/small/me.jpg"></div>';
+'<img class="img-circle img-responsive me-pic alt="Picture of Dan Weatherbee" srcset="dist/images/small/me.jpg"></div>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class=>contact</span><span>%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span>Mobile</span><span>%data%</span></li>';
@@ -15,7 +15,7 @@ var HTMLudacity = '<li class="flex-item"><span>Udacity</span><span>%data%</span>
 var HTMLblog = '<li class="flex-item"><span>Blog</span><span>%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span>Location</span><span>%data%</span></li>';
 
-var HTMLbioPic = '<div id="biopic-col" class="col-md-1"><img src="%data%" class="biopic"></div>';
+var HTMLbioPic = '<div id="biopic-col" class="col-md-1"><img srcset="%data%" class="biopic" alt="Ninja image"></div>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
@@ -32,7 +32,7 @@ var HTMLprojectStart = '<div class="project-entry"></div><hr>';
 var HTMLprojectTitle = '<a href="#" id="a-link">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p class="cubic-bezier"><br>%data%</p>';
-var HTMLprojectImage = '<img id="project-img" class="responsive-images" src="%data%" alt="project imgage">';
+var HTMLprojectImage = '<img id="project-img" class="responsive-images" srcset="%data%" alt="project image">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '%data%';
