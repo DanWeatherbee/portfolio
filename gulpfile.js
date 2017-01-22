@@ -41,11 +41,27 @@ gulp.task('compress-app', function (cb) {
     cb
   );
 });
+gulp.task('uglified-critical-js', function (cb) {
+  pump([
+        gulp.src('js/critical-js.js'),
+        uglify(),
+        gulp.dest('dist/uglified/critical')
+    ],
+    cb
+  );
+});
 gulp.task('css-min', function (done) {
-    gulp.src('dist/concatenated/css/allcss.css')
+    gulp.src('dist/concatenated/css/*.*')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/cssmin'));
+        done();
+});
+gulp.task('critical-css-min', function (done) {
+    gulp.src('css/critical-css.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/critical-cssmin'));
         done();
 });
 gulp.task('images-css',  function (done) {
@@ -88,5 +104,5 @@ gulp.task('minify-html', function() {
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist/'));
 });
-gulp.task('build', [`concat`, `concat-css`, `css-min`, `compress`, `compress-app`, `images-css`, `images-main-medium`, `images-main-small`, `gzip-main-medium`, `gzip-main-small`, `gzip-images-css`, `minify-html`, `gzip-js`], function (){
+gulp.task('build', [`concat`, `concat-css`, `css-min`, `critical-css-min`, `compress`, `compress-app`, `uglified-critical-js`, `images-css`, `images-main-medium`, `images-main-small`, `gzip-main-medium`, `gzip-main-small`, `gzip-images-css`, `minify-html`, `gzip-js`], function (){
 });

@@ -451,30 +451,6 @@ var mapOptions;
 var initializeMap;
 var locations = [];
 $("#map-container").hide();
-// function googleFail() {
-//   $("#button-show-map").hide();
-//   $("#map-container").hide();
-//   console.log(ERROR);
-//   alert(ERROR);
-// }
-
-// function googleSuccess() {
-//     setTimeout(function(){
-//         $("#map").append(googleMap);
-//         $("#button-show-map").fadeIn();
-
-//         $("#live-work-header").click(function() {
-//             $("#map-container").fadeOut();
-//             $("#button-show-map").fadeIn();
-//         });
-
-//         $("#button-show-map").click(function() {
-//             $("#map-container").fadeIn();
-//                 initializeMap();
-//             $("#button-show-map").fadeOut();
-//         });
-//           }, 3000);
-// }
 
  initializeMap = function() {
   $("#button-show-map").hide();
