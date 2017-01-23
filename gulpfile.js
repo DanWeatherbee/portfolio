@@ -64,6 +64,13 @@ gulp.task('critical-css-min', function (done) {
         .pipe(gulp.dest('dist/critical-cssmin'));
         done();
 });
+gulp.task('minify-html', function() {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist/'));
+});
+
+// Images
 gulp.task('images-css',  function (done) {
     gulp.src('css/images/large/*.*')
         .pipe(imagemin())
@@ -79,6 +86,8 @@ gulp.task('images-main-small',  function (done) {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images/small/'))
 });
+
+// Gzip
 gulp.task('gzip-main-medium', function() {
  gulp.src('dist/images/medium/*.*')
  .pipe(gzip())
@@ -99,10 +108,33 @@ gulp.task('gzip-js', function() {
  .pipe(gzip())
  .pipe(gulp.dest('dist/uglified/'));
 });
-gulp.task('minify-html', function() {
-  return gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist/'));
+
+// This includes all but images and gzip - run twice to create folder to minify from.
+gulp.task('build', [`concat`, `concat-css`, `css-min`, `critical-css-min`, `compress`, `compress-app`, `uglified-critical-js`, `minify-html`], function (){
+    console.log("README IMPORTANT");
+    console.log("building js, css and minify html for distribution.");
+    console.log("run twice to create folder to minify from.");
+    console.log("run build build-images for images or build-optimized for full build.");
 });
-gulp.task('build', [`concat`, `concat-css`, `css-min`, `critical-css-min`, `compress`, `compress-app`, `uglified-critical-js`, `images-css`, `images-main-medium`, `images-main-small`, `gzip-main-medium`, `gzip-main-small`, `gzip-images-css`, `minify-html`, `gzip-js`], function (){
+
+// Optimized Images.
+gulp.task('build-images', [`images-css`, `images-main-medium`, `images-main-small`], function (){
+    console.log("README IMPORTANT");
+    console.log("building images for distribution.");
+    console.log("you must run build one time before running build-images.");
+});
+
+// Gzip Optimized images.
+gulp.task('build-gzip', [`gzip-main-medium`, `gzip-main-small`, `gzip-images-css`, `minify-html`, `gzip-js`], function (){
+    console.log("README IMPORTANT");
+    console.log("you must run build-images one time first before build-gzip.");
+});
+                                     // ONE STEP BUILD
+/* Delete Dist Folder - Run this task 3 times for full build with optimized assets in gzip,
+ then replace index with dist/index.html in root folder.
+ */
+gulp.task('build-optimized', [`concat`, `concat-css`, `css-min`, `critical-css-min`, `compress`, `compress-app`, `uglified-critical-js`, `images-css`, `images-main-medium`, `images-main-small`, `gzip-main-medium`, `gzip-main-small`, `gzip-images-css`, `minify-html`, `gzip-js`], function (){
+    console.log("ONE STEP BUILD building all files for Optimized distribution.");
+    console.log("README IMPORTANT - DELETE DIST FOLDER IF EXISTS!");
+    console.log("YOU MUST RUN THIS TASK 3 TIMES TO PRE CREATE FOLDERS IN ADVANCE!");
 });

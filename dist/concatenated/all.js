@@ -1,20 +1,5 @@
 //Classes
-
-// Sound = function (src) {
-//     this.sound = document.createElement("audio");
-//     this.sound.src = src;
-//     this.sound.setAttribute("preload", "auto");
-//     this.sound.setAttribute("controls", "none");
-//     $("#player-ctrl").append(this.sound);
-//     this.play = function () {
-//         this.sound.play();
-//     };
-//     this.stop = function () {
-//         this.sound.pause();
-//     };
-// };
-// playSong = new Sound("sound/menu-track.mp3");
-
+// Created an object class to take a selector and manipulate it.
 DomControl = function (selector) {
 
     this.selector = $(selector);
@@ -541,10 +526,10 @@ $("#map-container").hide();
             map.setZoom(16);
             map.fitBounds(bounds);
             marker.setAnimation(google.maps.Animation.DROP);
-        })
+        });
 
         google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.open(map, marker)
+            infoWindow.open(map, marker);
             map.setZoom(10);
             map.panTo(marker.getPosition());
             console.log(marker.getPosition());
@@ -622,6 +607,6 @@ $("#map-container").hide();
         map.fitBounds(mapBounds);
     });
     $("#button-show-map").show;
-}
+};
 
 
