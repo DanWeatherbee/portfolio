@@ -3,19 +3,22 @@
                 font-size: 2em;
             }
         }
+
         @media only screen and (max-width: 1200px) {
             .landing {
                 color: lawngreen;
             }
         }
+
         @media only screen and (min-width: 200px) and (max-width: 736px) {
             #about-me {
                 font-size: 1em;
             }
         }
-    }
-    /*End of media queries*/
 
+    }
+
+    /*End of media queries*/
     .landing {
         height: 100%;
         width: 100%;
@@ -23,6 +26,7 @@
         z-index: 1;
         padding: 5% 10% 10% 10%;
     }
+
     #show-nav-button {
         border-radius: 100%;
         padding: 1em;
@@ -36,6 +40,7 @@
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
     }
+
     #show-nav-button:hover {
         border-radius: 70%;
         padding: 1em;
@@ -44,6 +49,7 @@
         color: lawngreen;
         background: url();
     }
+
     html,
     body,
     #about-me,
@@ -51,10 +57,12 @@
     .landing {
         background-color: black;
     }
+
     .landing,
     #about-me {
         color: lawngreen;
     }
+
     #about-me {
         font-size: 1.7em;
         padding: 10%;

@@ -13,14 +13,17 @@ bio.display = function () {
 
     formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' +
         bio.contacts.location + '</a>');
+
     // created a variable to save on repetition
     formattedArray = (formattedMobile + formattedEmail + formattedGithub +
         formattedlinkedin + formattedUdacity + formattedLocation);
-    // append the data
+
+    // append the data using my Dom control class.
     contact.add(formattedArray);
 
     formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
     formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
     // append the data
     header.add(formattedBiopic);
     header.add(formattedWelcomeMsg);
@@ -127,6 +130,7 @@ work.display = function () {
             formattedImage1 = HTMLprojectImage.replace("%data%", item.images[index_zero]);
             formattedImage2 = HTMLprojectImage.replace("%data%", item.images[index_one]);
             formattedImage = formattedImage1 + formattedImage2;
+
             // append data
             $(".project-entry:last").append(formattedImage);
         }

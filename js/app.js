@@ -1,6 +1,3 @@
-
-var app;
-
 init = function () {
     "use strict"
     $(".container").hide();
@@ -10,12 +7,14 @@ init = function () {
     work.display();
 };
 
+// Toggle method for nav buttons and menu.
 init.toggle = function () {
 
     showNavElem = $("#show-nav-button");
     aboutMeElem = $("#about-me");
     landingElem = $(".landing");
     navElem = $(".nav");
+
     // Show hide flip toggle method for nav elements.
     projectsHeaderElem.click(function () {
         bttnShowProjectsElem.fadeIn();
@@ -55,7 +54,11 @@ init.toggle = function () {
         educationElem.fadeIn();
         bttnShowEducationElem.fadeOut();
     });
+
+    // Fade out buttons and use menu to show buttons.
     navElem.fadeOut();
+    showNavElem.html("Go");
+
     landingElem.click(function () {
         landingElem.addClass("flip");
         setTimeout(function () {

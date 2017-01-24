@@ -43,8 +43,8 @@ $("#map-container").hide();
                 $("#button-show-map").fadeToggle();
                 console.log("could not retrieve location.");
             }
-        // adds the single location property from bio to the locations array
 
+        // adds the single location property from bio to the locations array
         locations.push(bio.contacts.location);
 
         /*
@@ -62,6 +62,7 @@ $("#map-container").hide();
             locations.push(job.location);
         });
 
+        // City I live in.
         vernon = {lat: 50.2670, lng: -119.2720};
 
         panorama = new google.maps.StreetViewPanorama(
@@ -88,6 +89,7 @@ $("#map-container").hide();
           about a location.
         */
         infoWindow = new google.maps.InfoWindow();
+
         // The next lines save location data from the search result object to local variables
         lat = placeData.geometry.location.lat(); // latitude from the place service
         lon = placeData.geometry.location.lng(); // longitude from the place service
@@ -122,8 +124,10 @@ $("#map-container").hide();
          bounds.extend() takes in a map location object
          */
         bounds.extend(new google.maps.LatLng(lat, lon));
+
         // fit the map to the new marker
         map.fitBounds(bounds);
+
         // center the map
         map.panTo(bounds.getCenter());
     }
@@ -143,16 +147,17 @@ $("#map-container").hide();
     and fires off Google place searches for each location
     */
     function pinPoster(locations) {
-
         /*
          creates a Google place search service object. PlacesService does the work of
          actually searching for location data.
          */
+
         var service = new google.maps.places.PlacesService(map);
 
         // Iterates through the array of locations, creates a search object for each location
         locations.forEach(function(place) {
-            // the search request object
+            // the search request object.
+
             request = {
                 query: place
             };
@@ -161,6 +166,7 @@ $("#map-container").hide();
             Actually searches the Google Maps API for location data and runs the callback
             function with the search results after each search.
             */
+
             service.textSearch(request, callback);
         });
     }
@@ -177,8 +183,6 @@ $("#map-container").hide();
     */
     pinPoster(locations);
 
-
-
     /*
     Vanilla JS way to listen for resizing of the window
     and adjust map bounds
@@ -187,6 +191,7 @@ $("#map-container").hide();
         //Make sure the map bounds get updated on page resize
         map.fitBounds(mapBounds);
     });
+
     $("#button-show-map").show;
 };
 

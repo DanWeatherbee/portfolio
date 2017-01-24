@@ -1,5 +1,7 @@
-//Classes
-// Created an object class to take a selector and manipulate it.
+/*
+Classes
+Created an object class to take a selector and manipulate it.
+*/
 DomControl = function (selector) {
 
     this.selector = $(selector);
@@ -20,6 +22,7 @@ DomControl = function (selector) {
     };
 };
 
+// Instantiate objects.
 contact = new DomControl("#top-contacts");
 footer = new DomControl("#footer-contacts");
 header = new DomControl("#header");

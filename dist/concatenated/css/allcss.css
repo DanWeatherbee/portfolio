@@ -3,19 +3,22 @@
                 font-size: 2em;
             }
         }
+
         @media only screen and (max-width: 1200px) {
             .landing {
                 color: lawngreen;
             }
         }
+
         @media only screen and (min-width: 200px) and (max-width: 736px) {
             #about-me {
                 font-size: 1em;
             }
         }
-    }
-    /*End of media queries*/
 
+    }
+
+    /*End of media queries*/
     .landing {
         height: 100%;
         width: 100%;
@@ -23,6 +26,7 @@
         z-index: 1;
         padding: 5% 10% 10% 10%;
     }
+
     #show-nav-button {
         border-radius: 100%;
         padding: 1em;
@@ -36,6 +40,7 @@
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
     }
+
     #show-nav-button:hover {
         border-radius: 70%;
         padding: 1em;
@@ -44,6 +49,7 @@
         color: lawngreen;
         background: url();
     }
+
     html,
     body,
     #about-me,
@@ -51,10 +57,12 @@
     .landing {
         background-color: black;
     }
+
     .landing,
     #about-me {
         color: lawngreen;
     }
+
     #about-me {
         font-size: 1.7em;
         padding: 10%;
@@ -69,38 +77,47 @@
     animation: myfirst 5s infinite;
     animation-direction: alternate;
 }
-/* Safari 4.0 - 8.0 */
 
+/* Safari 4.0 - 8.0 */
 @-webkit-keyframes myfirst {
     0% {
         background: red;
     }
+
     25% {
         background: yellow;
     }
+
     50% {
         background: blue;
     }
+
     75% {
         background: green;
     }
+
     100% {
         background: red;
     }
 }
+
 @keyframes myfirst {
     0% {
         background: red;
     }
+
     25% {
         background: yellow;
     }
+
     50% {
         background: blue;
     }
+
     75% {
         background: green;
     }
+
     100% {
         background: red;
     }
@@ -123,25 +140,32 @@
 
     padding-bottom: 1.5em;
 }
+
 .container {
     background: url("images/large/cool_girl-HD-lg-1920x1080.jpg")fixed no-repeat center;
 }
+
 body {
     background: url("images/large/wallpapers-HD-lg-2560x1600.jpg")fixed no-repeat center;
 }
+
 .container:hover {
     background: url("images/large/wallpapers-HD-lg-2560x1600.jpg")fixed no-repeat center;
 }
+
 .container {
     min-height: 900px;
 }
+
 #player-ctrl {
     padding-top: 5%;
 }
+
 .me-pic {
     height: 200px;
     width: 200px;
 }
+
 body,
 .container,
 a,
@@ -157,18 +181,22 @@ a,
 .welcome-message {
     background-color: black;
 }
+
 #developer {
     color: lawngreen;
     border-radius: 100%;
 }
+
 p {
     font-size: 2em;
     line-height: 1.5em;
 }
+
 li,
 a {
     color: lawngreen;
 }
+
 #test-suite {
     background-color: blue;
     color: white;
@@ -176,11 +204,13 @@ a {
     right: 0;
     opacity: .5;
 }
+
 #test-suite:hover {
     background-color: darkblue;
     color: red;
     opacity: .9;
 }
+
 #pano {
     position: relative;
     float: left;
@@ -188,33 +218,41 @@ a {
     width: 100%;
     z-index: 1;
 }
+
 #skills-span {
     color: red;
     font-size: 150%;
     opacity: .7;
 }
+
 #skills {
     letter-spacing: 1em;
 }
+
 img {
     height: 100%;
     width: 100%;
 }
+
 .letter-spacer {
     letter-spacing: .8em;
 }
+
 #biopic-col {
     border-radius: 100%;
     opacity: .7;
 }
+
 .biopic {
     background: transparent;
 }
+
 #biopic-col,
 .biopic {
     height: 100px;
     width: 100px;
 }
+
 body,
 ul,
 li,
@@ -227,9 +265,11 @@ h6 {
     padding: 0;
     margin: 0;
 }
+
 .clear-fix {
     overflow: auto;
 }
+
 span,
 h1,
 h2,
@@ -254,78 +294,95 @@ button:hover,
     -moz-box-shadow: -2px 20px 24px -9px turquoise;
     box-shadow: -2px 20px 24px -9px turquoise;
 }
+
 .red-headers {
     color: red;
 }
+
 .img-circle {
     height: 100px;
     width: 100px;
 }
+
 .red-headers:hover {
     color: lightblue;
     background-color: darkgreen;
 }
+
 #projects,
 #education,
 #work-experience,
 #button-show-map {
     display: none;
 }
+
 .education-entry,
 .work-entry,
 .project-entry {
     padding: 0 5%;
 }
+
 h1 {
     font-size: 40px;
     line-height: 48px;
     display: inline;
 }
+
 h2 {
     font-size: 24px;
     line-height: 29px;
     padding: 10px;
 }
+
 h3 {
     font-style: italic;
     font-size: 20px;
     line-height: 22px;
 }
+
 h4 {
     line-height: 17px;
 }
+
 h2,
 h4 {
     font-weight: bold;
 }
+
 h2,
 h3,
 h4,
 h5 {
     padding: 10px 5%;
 }
+
 .date-text,
 .location-text {
     font-style: italic;
     font-size: 14px;
     line-height: 16px;
 }
+
 .date-text {
     float: left;
 }
+
 .location-text {
     float: right;
 }
+
 a {
     padding: 1.5em;
     border-color: lawngreen;
     display: block;
 }
+
 audio {
     position: fixed;
     top: 0;
     right: 0;
 }
+
 a:hover,
 .red-headers:hover,
 #top-contacts:hover {
@@ -339,18 +396,22 @@ a:hover,
     -moz-box-shadow: -2px 20px 24px -9px turquoise;
     box-shadow: -2px 20px 24px -9px turquoise;
 }
+
 .welcome-message {
     font-style: italic;
     font-size: 18px;
     line-height: 28px;
     opacity: .7;
 }
+
 #skills-h3 {
     display: none;
 }
+
 #header {
     background: transparent;
 }
+
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -359,22 +420,28 @@ a:hover,
     justify-content: space-around;
     padding: 10px;
 }
+
 ul {
     list-style-type: none;
 }
+
 img {
     padding: 6%;
 }
+
 #project-img {
     max-width: 400px;
     max-height: 400px;
 }
+
 span {
     padding: 5px;
 }
+
 #row-clear {
     clear: both;
 }
+
 #map-container {
     position: relative;
     display: block;
@@ -382,23 +449,28 @@ span {
     width: 83%;
     margin: 0 5%;
 }
+
 #map {
     position: relative;
     height: 400px;
     width: 100%;
     padding-bottom: 5%;
 }
+
 #info {
     color: black;
 }
+
 .cubic-bezier {
     transition: .5s;
     transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(0, 1, 1, 0);
 }
+
 .tranparent-on {
     background-color: transparent;
 }
+
 .flip {
     -webkit-transform-origin: 50% 0%;
     -o-transform-origin: 50% 0%;
@@ -409,21 +481,24 @@ span {
     border: solid 10px;
     border-color: red;
 }
+
 #a-link {
     border: 2px solid;
     border-color: turquoise;
 }
+
 #about-me {
     -webkit-box-shadow: -2px 20px 24px -9px red;
     -moz-box-shadow: -2px 20px 24px -9px red;
     box-shadow: -2px 20px 24px -9px red;
 }
-/* Media queries to handle various device widths */
 
+/* Media queries to handle various device widths */
 @media only screen and (min-width: 1200px) {
     #player-ctrl {
         padding-top: 10%;
     }
+
     .me-pic {
         height: 280px;
         width: 290px;
@@ -434,24 +509,28 @@ span {
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
     }
+
     li,
     #a-link:hover,
     a {
         color: lawngreen;
     }
 }
-/*Labtop Ipad*/
 
+/*Labtop Ipad*/
 @media only screen and (max-width: 1200px) {
     #about-me {
         padding: 3%;
     }
+
     #biopic-col {
         display: none;
     }
+
     button {
         opacity: 1;
     }
+
     .container,
     .container:hover,
     body,
@@ -459,9 +538,11 @@ span {
         background: url()fixed no-repeat center;
         background-color: black;
     }
+
     .container {
         padding-top: 15%;
     }
+
     h2,
     h3,
     h4 {
@@ -469,6 +550,7 @@ span {
         -moz-box-shadow: -2px 2px 2px -9px turquoise;
         box-shadow: -2px 2px 2px -9px turquoise;
     }
+
     .me-pic {
         height: 200px;
         width: 200px;
@@ -479,17 +561,19 @@ span {
         -moz-box-shadow: -2px 20px 24px -9px turquoise;
         box-shadow: -2px 20px 24px -9px turquoise;
     }
+
     #a-link:hover,
     a {
         color: lawngreen;
     }
 }
-/*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
 
+/*Nexus 5x, 6p Galaxy S5, Iphone 5, 6 Plus*/
 @media only screen and (max-width: 365px) {
     .me-pic {
         display: none;
     }
+
     .container,
     body {
         background: url()fixed no-repeat center;
@@ -510,53 +594,66 @@ span {
         padding-bottom: 1.5em;
     }
 }
+
 @media only screen and (min-width: 200px) and (max-width: 736px) {
     #about-me {
         font-size: 1em;
         padding: 1%;
     }
+
     .me-pic {
         display: none;
     }
+
     p {
         font-size: 1em;
         line-height: 1.5em;
     }
+
     #about-me,
     button {
         -webkit-box-shadow: -2px 20px 24px -9px red;
         -moz-box-shadow: -2px 20px 24px -9px red;
         box-shadow: -2px 20px 24px -9px red;
     }
+
     button {
         opacity: 9;
     }
+
     #header {
         font-size: 70%;
     }
+
     #name {
         font-size: 180%;
     }
+
     .welcome-message {
         display: none;
     }
+
     #project-img {
         max-width: 285px;
         max-height: 285px;
     }
+
     #copyright,
     #top-contacts {
         font-size: 1.5em;
     }
+
     .education-entry {
         color: red;
         background-color: midnightblue;
     }
+
     a,
     #developer,
     a:hover {
         color: lawngreen;
     }
+
     h2,
     h3,
     h4 {
@@ -566,31 +663,36 @@ span {
         -moz-box-shadow: -2px 2px 2px -9px turquoise;
         box-shadow: -2px 2px 2px -9px turquoise;
     }
+
     button {
         background-color: turquoise;
         padding: .5em;
     }
+
     .me-pic {
         height: 22%;
         width: 35%;
         position: relative;
         left: 33%;
     }
+
     h4 {
         font-size: 1em;
     }
+
     .container {
         padding-top: 10%;
     }
+
     h2,
     span {
         color: red;
         background-color: black;
     }
+
     #skills-span {
         display: none;
     }
-}
 }
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 

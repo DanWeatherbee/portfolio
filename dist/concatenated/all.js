@@ -1,5 +1,7 @@
-//Classes
-// Created an object class to take a selector and manipulate it.
+/*
+Classes
+Created an object class to take a selector and manipulate it.
+*/
 DomControl = function (selector) {
 
     this.selector = $(selector);
@@ -20,6 +22,7 @@ DomControl = function (selector) {
     };
 };
 
+// Instantiate objects.
 contact = new DomControl("#top-contacts");
 footer = new DomControl("#footer-contacts");
 header = new DomControl("#header");
@@ -29,7 +32,7 @@ landing = new DomControl(".landing");
 var bio = {
     "name": "Dan Weatherbee",
     "role": "Front End Web Developer",
-    "about": "I have been building, creating, deconstructing, reconstructing, and reverse engineering just for the thrill of it. I have extensive knowledge of Image, Video, Game Editors; I have highly developed communication, problem solving and debugging skills. I have a solid understanding of JavaScript, HTML5, and CSS3. I have additional experience with database types and CMS Deployment and Apache. I am highly motivated and goal-oriented. I can effectively communicate with the creative team and clients. With my skills and experiences, I am confident we can build amazing things together. The best way to contact me is by email or phone. Best regards, yours truly Dan Weatherbee. -  Click this window to Close.",
+    "about": "I have been building, creating, reconstructing, and reverse engineering websites starting in 1995, just for the thrill of it. Extensive knowledge of Image, Video, Game Editors are the result of 10 years of game level mapping, problem solving and debugging. All my time on the PC I now devote to a solid understanding of JavaScript, HTML5, CSS3 for modern web development. I have additional experience with dedicated servers, database's and CMS Deployment and Apache. I am highly motivated and goal-oriented with a highly developed communication skills from retail and as a Customer Service Representative. I can effectively communicate with the creative team and clients. With my skills and experiences, I am confident we can build amazing things together. The best way to contact me is by email or phone. Best regards, yours truly Dan Weatherbee. -  Click or Tap this window to Close.",
     "contacts": {
         "mobile": "250-307-6272",
         "email": "dan@jedi-clan.us",
@@ -96,7 +99,7 @@ var work = {
         "title": "Front End Web Developer",
         "location": "Willow Dr Vernon, BC",
         "dates": "Jan 2017 - Present",
-        "description": "I am interested in full stack and this is my pet project to learn it. I find the back end as interesting as the front end and wish to understand it all. What I have been up to; - Learning and understanding the folder structure on a remote dedicated server. - Website creation and deployment from dedicated box up via ssh(putty). - Installed Ubuntu 16.4 on dedicated bare bones Server followed by mysql. - Created database and installed Word Press - Currently researching and learning the built in control panel webmin and its features. - Currently learning PHP(very close to regular javascript), easy to understand. - Currently learning more about mysql queries and database creation. - Currently learning about DNS, Network, nameservers, security and much more."
+        "description": "I am interested in full stack and this is my pet project to learn it. I find the back end as interesting as the front end and wish to understand it all. What I have been up to; - Learning and understanding the folder structure on a remote dedicated server. - Website creation and deployment from dedicated box up via ssh(putty). - Installed Ubuntu 16.4 on dedicated bare bones Server followed by mysql. - Created database and installed Word Press - Currently researching and learning the built in control panel webmin and its features. - Currently learning PHP(very close to regular javascript), easy to understand. - Currently learning more about mysql queries and database creation. - Currently learning about DNS, Network, name servers, security and much more."
     },
     {
         "employer": "Pioneer Janitorial Services LTD",
@@ -118,7 +121,7 @@ var projects = {
         "title": "<a href='https://danweatherbee.github.io/app-p6/' id='a-link'>" +
             "Feed Reader Testing P6 FEND</a>",
         "dates": "Dec 1 2016",
-        "description": "app-p6 FEND Wrote comprehensive unit tests, using" +
+        "description": "Wrote comprehensive unit tests, using" +
         " the Jasmine testing framework, for an RSS Feed Reader application that" +
         " uses Google's RSS API.",
         "images": ["dist/images/medium/app-6.png", "dist/images/medium/app-6-code.png"]
@@ -126,7 +129,7 @@ var projects = {
         "title": "<a href='https://danweatherbee.github.io/app-p5/' id='a-link'>" +
             "Neighborhood Map P5 FEND</a>",
         "dates": "2016",
-        "description": "Project 5 FEND A single-page web application built using" +
+        "description": "Single page web application built using" +
         " the Knockout framework, that displays a Google Map of an area and " +
         "various points of interest. Users can search all included landmarks and, when" +
         " selected, additional information about a landmark is presented from the" +
@@ -137,16 +140,16 @@ var projects = {
         "title": "<a href='https://danweatherbee.github.io/app-p4/' id='a-link'>" +
             "Website Optimization P4 FEND</a>",
         "dates": "2016",
-        "description": "app-p4 FEND Optimized an inefficient web application's JavaScript," +
+        "description": "Optimized an inefficient web application's JavaScript," +
         " CSS and assets delivery, ensuring it runs at 60 fps and achieves a PageSpeed" +
         " score of at least 95.",
         "images": ["dist/images/medium/web-performance.png", "dist/images/medium/web-performance-2.png"]
     },
     {
         "title": "<a href='https://danweatherbee.github.io/app-p3/' id='a-link'>" +
-            "Frontend Nanodegree Arcade Game P3 FEND</a>",
+            "Front End Nanodegree Arcade Game P3 FEND</a>",
         "dates": "2016",
-        "description": "app-p3 FEND An HTML5 Canvas powered video game," +
+        "description": "HTML5 Canvas powered video game," +
         " developed using the best practices in Object Oriented JavaScript.",
         "images": ["dist/images/medium/arcade.png", "dist/images/medium/arcade-2.png"]
     }]
@@ -297,14 +300,17 @@ bio.display = function () {
 
     formattedLocation = HTMLlocation.replace("%data%", '<a href="https://www.vernon.ca/" id="a-link">' +
         bio.contacts.location + '</a>');
+
     // created a variable to save on repetition
     formattedArray = (formattedMobile + formattedEmail + formattedGithub +
         formattedlinkedin + formattedUdacity + formattedLocation);
-    // append the data
+
+    // append the data using my Dom control class.
     contact.add(formattedArray);
 
     formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
     formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
     // append the data
     header.add(formattedBiopic);
     header.add(formattedWelcomeMsg);
@@ -411,6 +417,7 @@ work.display = function () {
             formattedImage1 = HTMLprojectImage.replace("%data%", item.images[index_zero]);
             formattedImage2 = HTMLprojectImage.replace("%data%", item.images[index_one]);
             formattedImage = formattedImage1 + formattedImage2;
+
             // append data
             $(".project-entry:last").append(formattedImage);
         }
@@ -462,8 +469,8 @@ $("#map-container").hide();
                 $("#button-show-map").fadeToggle();
                 console.log("could not retrieve location.");
             }
-        // adds the single location property from bio to the locations array
 
+        // adds the single location property from bio to the locations array
         locations.push(bio.contacts.location);
 
         /*
@@ -481,6 +488,7 @@ $("#map-container").hide();
             locations.push(job.location);
         });
 
+        // City I live in.
         vernon = {lat: 50.2670, lng: -119.2720};
 
         panorama = new google.maps.StreetViewPanorama(
@@ -507,6 +515,7 @@ $("#map-container").hide();
           about a location.
         */
         infoWindow = new google.maps.InfoWindow();
+
         // The next lines save location data from the search result object to local variables
         lat = placeData.geometry.location.lat(); // latitude from the place service
         lon = placeData.geometry.location.lng(); // longitude from the place service
@@ -541,8 +550,10 @@ $("#map-container").hide();
          bounds.extend() takes in a map location object
          */
         bounds.extend(new google.maps.LatLng(lat, lon));
+
         // fit the map to the new marker
         map.fitBounds(bounds);
+
         // center the map
         map.panTo(bounds.getCenter());
     }
@@ -562,16 +573,17 @@ $("#map-container").hide();
     and fires off Google place searches for each location
     */
     function pinPoster(locations) {
-
         /*
          creates a Google place search service object. PlacesService does the work of
          actually searching for location data.
          */
+
         var service = new google.maps.places.PlacesService(map);
 
         // Iterates through the array of locations, creates a search object for each location
         locations.forEach(function(place) {
-            // the search request object
+            // the search request object.
+
             request = {
                 query: place
             };
@@ -580,6 +592,7 @@ $("#map-container").hide();
             Actually searches the Google Maps API for location data and runs the callback
             function with the search results after each search.
             */
+
             service.textSearch(request, callback);
         });
     }
@@ -596,8 +609,6 @@ $("#map-container").hide();
     */
     pinPoster(locations);
 
-
-
     /*
     Vanilla JS way to listen for resizing of the window
     and adjust map bounds
@@ -606,6 +617,7 @@ $("#map-container").hide();
         //Make sure the map bounds get updated on page resize
         map.fitBounds(mapBounds);
     });
+
     $("#button-show-map").show;
 };
 
