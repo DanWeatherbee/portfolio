@@ -52,6 +52,7 @@
 
     html,
     body,
+    footer,
     #about-me,
     #show-nav-button:hover,
     .landing {
@@ -59,6 +60,7 @@
     }
 
     .landing,
+    footer,
     #about-me {
         color: lawngreen;
     }
@@ -154,7 +156,7 @@ body {
 }
 
 .container {
-    min-height: 900px;
+    min-height: 800px;
 }
 
 #player-ctrl {

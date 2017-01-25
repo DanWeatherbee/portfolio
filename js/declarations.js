@@ -3,6 +3,7 @@
 // HTML containers
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
 var HTMLheaderRole = '<p id="developer" class="slide-animation">%data%</p><hr>';
+// Edit srcset="dist/images/small/me.jpg" to srcset="dist/images/small/me.jpg.gz" for gzip.
 var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
 '<img class="img-circle img-responsive me-pic alt="Picture of Dan Weatherbee" srcset="dist/images/small/me.jpg"></div>';
 

@@ -24,11 +24,16 @@ DomControl = function (selector) {
 
 // Instantiate objects.
 contact = new DomControl("#top-contacts");
-footer = new DomControl("#footer-contacts");
 header = new DomControl("#header");
 test = new DomControl("#test-suite");
 landing = new DomControl(".landing");
-
+/*
+IMPORTANT FOR GZIP
+ If you use gzip you must add .gz to all picture path names.
+ e.g. "dist/images/small/ninja.png" becomes "dist/images/small/ninja.png.gz".
+ Gzip only works on gzip enabled servers.
+ This site is hosted on github witch at the moment doe's not support gzip.
+ */
 var bio = {
     "name": "Dan Weatherbee",
     "role": "Front End Web Developer",
@@ -159,6 +164,7 @@ var projects = {
 // HTML containers
 var HTMLheaderName = '<h1 id="name" class="text-uppercase letter-spacer">%data%</h1>';
 var HTMLheaderRole = '<p id="developer" class="slide-animation">%data%</p><hr>';
+// Edit srcset="dist/images/small/me.jpg" to srcset="dist/images/small/me.jpg.gz" for gzip.
 var HTMLaboutMe = '<div id="about-me" class="cubic-bezier">%data%' +
 '<img class="img-circle img-responsive me-pic alt="Picture of Dan Weatherbee" srcset="dist/images/small/me.jpg"></div>';
 

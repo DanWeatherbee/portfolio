@@ -24,7 +24,6 @@ DomControl = function (selector) {
 
 // Instantiate objects.
 contact = new DomControl("#top-contacts");
-footer = new DomControl("#footer-contacts");
 header = new DomControl("#header");
 test = new DomControl("#test-suite");
 landing = new DomControl(".landing");

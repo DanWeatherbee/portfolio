@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('body').append('<h4>' + "Time until DOMready: ", Date.now() - timerStart +
-     ' milliseconds - seconds: </h4>' + ' ' + (Date.now() - timerStart)/1000);
+    $("footer").append('<hr><section><h4>' + "Time until DOMready: ", Date.now() - timerStart +
+     ' milliseconds - seconds: </h4><h4>' + (Date.now() - timerStart)/1000) + '</h4></section>';
 });
 
 $(window).load(function() {

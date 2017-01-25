@@ -1,4 +1,10 @@
-
+/*
+IMPORTANT FOR GZIP
+ If you use gzip you must add .gz to all picture path names.
+ e.g. "dist/images/small/ninja.png" becomes "dist/images/small/ninja.png.gz".
+ Gzip only works on gzip enabled servers.
+ This site is hosted on github witch at the moment doe's not support gzip.
+ */
 var bio = {
     "name": "Dan Weatherbee",
     "role": "Front End Web Developer",
