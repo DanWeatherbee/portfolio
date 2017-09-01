@@ -23,11 +23,11 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span id="skills-span" class="text-uppercase">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" id="a-link">%data%';
+var HTMLworkEmployer = '<p style="padding-left:1em;" id="a-link">%data%</p>';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p class="cubic-bezier"><br>%data%</p>';
+var HTMLworkDescription = '<p class="cubic-bezier"><br>%data%</p><hr><br><br>';
 
 var HTMLprojectStart = '<div class="project-entry"></div><hr>';
 var HTMLprojectTitle = '<a href="#" id="a-link">%data%</a>';

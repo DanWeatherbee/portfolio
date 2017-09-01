@@ -100,11 +100,11 @@ var education = {
 
 var work = {
     "jobs": [{
-        "employer": "Freelance - Dedicated Server Network Configuration",
+        "employer": "Freelance - Kasper Denture Cinic",
         "title": "Front End Web Developer",
-        "location": "Willow Dr Vernon, BC",
-        "dates": "Jan 2017 - Present",
-        "description": "I am interested in full stack and this is my pet project to learn it. I find the back end as interesting as the front end and wish to understand it all. What I have been up to; - Learning and understanding the folder structure on a remote dedicated server. - Website creation and deployment from dedicated box up via ssh(putty). - Installed Ubuntu 16.4 on dedicated bare bones Server followed by mysql. - Created database and installed Word Press - Currently researching and learning the built in control panel webmin and its features. - Currently learning PHP(very close to regular javascript), easy to understand. - Currently learning more about mysql queries and database creation. - Currently learning about DNS, Network, name servers, security and much more."
+        "location": "3414 28 Ave Vernon, BC",
+        "dates": "Jul 2017 - Present",
+        "description": "Created a new website to replace the old version."
     },
     {
         "employer": "Pioneer Janitorial Services LTD",
@@ -184,11 +184,11 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span id="skills-span" class="text-uppercase">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" id="a-link">%data%';
+var HTMLworkEmployer = '<p style="padding-left:1em;" id="a-link">%data%</p>';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p class="cubic-bezier"><br>%data%</p>';
+var HTMLworkDescription = '<p class="cubic-bezier"><br>%data%</p><hr><br><br>';
 
 var HTMLprojectStart = '<div class="project-entry"></div><hr>';
 var HTMLprojectTitle = '<a href="#" id="a-link">%data%</a>';

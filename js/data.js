@@ -71,11 +71,11 @@ var education = {
 
 var work = {
     "jobs": [{
-        "employer": "Freelance - Dedicated Server Network Configuration",
+        "employer": "Freelance - Kasper Denture Cinic",
         "title": "Front End Web Developer",
-        "location": "Willow Dr Vernon, BC",
-        "dates": "Jan 2017 - Present",
-        "description": "I am interested in full stack and this is my pet project to learn it. I find the back end as interesting as the front end and wish to understand it all. What I have been up to; - Learning and understanding the folder structure on a remote dedicated server. - Website creation and deployment from dedicated box up via ssh(putty). - Installed Ubuntu 16.4 on dedicated bare bones Server followed by mysql. - Created database and installed Word Press - Currently researching and learning the built in control panel webmin and its features. - Currently learning PHP(very close to regular javascript), easy to understand. - Currently learning more about mysql queries and database creation. - Currently learning about DNS, Network, name servers, security and much more."
+        "location": "3414 28 Ave Vernon, BC",
+        "dates": "Jul 2017 - Present",
+        "description": "Created a new website to replace the old version."
     },
     {
         "employer": "Pioneer Janitorial Services LTD",
